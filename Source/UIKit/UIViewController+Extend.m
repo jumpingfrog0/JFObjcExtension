@@ -51,5 +51,15 @@
     [navVc pushViewController:controller animated:YES];
 }
 
+- (void)present:(__kindof UIViewController *)viewControllerToPresent fromStoryboard:(NSString *)storyboardName inNavigationController:(__kindof UINavigationController *)navigationController {
+    UIViewController *vc = [viewControllerToPresent instantiateFromStoryboardWithName:storyboardName];
+    UINavigationController *navigation = [navigationController initWithRootViewController:vc];
+    [self presentViewController:navigation animated:YES completion:nil];
+}
 
+- (void)present:(__kindof UIViewController *)viewControllerToPresent inNavigationController:(__kindof UINavigationController *)navigationController {
+    UIViewController *vc = [[viewControllerToPresent alloc] init];
+    UINavigationController *navigation = [navigationController initWithRootViewController:vc];
+    [self presentViewController:navigation animated:YES completion:nil];
+}
 @end

@@ -1,5 +1,5 @@
 //
-//  ObjcExtension-Prefix.pch
+//  UIButton+Extend.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -26,15 +26,22 @@
 //  THE SOFTWARE.
 //
 
-#ifdef __OBJC__
-
 #import "UIButton+Extend.h"
-#import "UIColor+Extend.h"
-#import "UIImage+Extend.h"
-#import "UIView+Frame.h"
-#import "UIViewController+Extend.h"
 
-#import "NSString+Extend.h"
-#import "LogMacros.h"
-#import "NSArray+Log.h"
-#endif
+@implementation UIButton (Extend)
+- (void)alignVerticalWithSpacing:(CGFloat)spacing bottomPadding:(CGFloat)bottomPadding {
+    CGSize imageSize = self.imageView.image.size;
+    CGSize titleSize = [self.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.titleLabel.font}];
+    CGSize buttonSize = self.bounds.size;
+    
+    CGFloat titleBottomOffset = buttonSize.height - titleSize.height - bottomPadding * 2;
+    CGFloat imageBottomOffset = buttonSize.height - imageSize.height;
+    CGFloat imageTopOffset = floor((titleSize.height + bottomPadding + spacing) * 2);
+    self.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width, -titleBottomOffset, 0.0);
+    self.imageEdgeInsets = UIEdgeInsetsMake(-imageTopOffset, 0.0, -imageBottomOffset, -titleSize.width);
+    
+    // increase the content height to avoid clipping
+    CGFloat edgeOffset = fabs(titleSize.height - imageSize.height) / 2.0;
+    self.contentEdgeInsets = UIEdgeInsetsMake(edgeOffset, 0.0, edgeOffset, 0.0);
+}
+@end

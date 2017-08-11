@@ -1,8 +1,8 @@
 //
-//  ObjcExtension-Prefix.pch
+//  UIButtonTestViewController.h
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
+//  Created by sheldon on 11/08/2017.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC
@@ -26,15 +26,8 @@
 //  THE SOFTWARE.
 //
 
-#ifdef __OBJC__
+#import <UIKit/UIKit.h>
 
-#import "UIButton+Extend.h"
-#import "UIColor+Extend.h"
-#import "UIImage+Extend.h"
-#import "UIView+Frame.h"
-#import "UIViewController+Extend.h"
+@interface UIButtonTestViewController : UIViewController
 
-#import "NSString+Extend.h"
-#import "LogMacros.h"
-#import "NSArray+Log.h"
-#endif
+@end

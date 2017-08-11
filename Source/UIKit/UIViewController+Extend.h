@@ -34,4 +34,7 @@
 + (instancetype)instantiateFromStoryboardWithName:(NSString *)name bundle:(NSBundle *)bundle indentifier:(NSString *)indentifier;
 
 + (void)pushInNavigationController:(UINavigationController *)navVc fromStoryboard:(NSString *)storyboardName;
+
+- (void)present:(__kindof UIViewController *)viewControllerToPresent fromStoryboard:(NSString *)storyboardName inNavigationController:(__kindof UINavigationController *)navigationController;
+- (void)present:(__kindof UIViewController *)viewControllerToPresent inNavigationController:(__kindof UINavigationController *)navigationController;
 @end

@@ -1,5 +1,5 @@
 //
-//  ObjcExtension-Prefix.pch
+//  UIButton+Extend.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -26,15 +26,14 @@
 //  THE SOFTWARE.
 //
 
-#ifdef __OBJC__
+#import <UIKit/UIKit.h>
 
-#import "UIButton+Extend.h"
-#import "UIColor+Extend.h"
-#import "UIImage+Extend.h"
-#import "UIView+Frame.h"
-#import "UIViewController+Extend.h"
-
-#import "NSString+Extend.h"
-#import "LogMacros.h"
-#import "NSArray+Log.h"
-#endif
+@interface UIButton (Extend)
+/**
+ 设置按钮的图片和文字垂直对齐
+ 
+ @param spacing 图片与文字的间距
+ @param bottomPadding 文字距离底部的间距
+ */
+- (void)alignVerticalWithSpacing:(CGFloat)spacing bottomPadding:(CGFloat)bottomPadding;
+@end

@@ -29,6 +29,7 @@
 #import "ViewController.h"
 #import "UIImageTestController.h"
 #import "UIViewController+Extend.h"
+#import "UIButtonTestViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, copy) NSArray *modules;
@@ -42,7 +43,7 @@
     self.modules = @[@"Foundation", @"UIKit"];
     self.categories = @[
                    @[@"NSArray", @"NSString"],
-                   @[@"UIColor", @"UIImage", @"UIImageView", @"UIView", @"UIViewController"],
+                   @[@"UIColor", @"UIImage", @"UIImageView", @"UIView", @"UIButton", @"UIViewController"],
                    ];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -76,6 +77,8 @@
     
     if ([category isEqualToString:@"UIImage"]) {
         [UIImageTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+    } else if ([category isEqualToString:@"UIButton"]) {
+        [UIButtonTestViewController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     }
 }
 @end
