@@ -54,17 +54,31 @@
     return newImage;
 }
 
-+ (UIImage *)resizableImage:(NSString *)name
++ (UIImage *)resizableImageNamed:(NSString *)name
 {
-    UIImage *normal = [UIImage imageNamed:name];
+    UIImage *origin = [UIImage imageNamed:name];
     
 #ifdef DEBUG
     NSAssert(normal != nil, @"The resizable image should not be nil.");
+#else
+    NSLog(@"The resizable image should not be nil.");
 #endif
     
-    CGFloat w = normal.size.width * 0.5;
-    CGFloat h = normal.size.height * 0.5;
-    return [normal resizableImageWithCapInsets:UIEdgeInsetsMake(h, w, h, w)];
+    return [origin autoResize];
+}
+
+- (UIImage *)autoResize {
+    CGFloat w = self.size.width * 0.5;
+    CGFloat h = self.size.height * 0.5;
+    UIEdgeInsets capInsets = UIEdgeInsetsMake(h, w, h, w);
+    CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (systemVersion >= 5.0) {
+        // `resizableImageWithCapInsets:` 可以重复一个区域进行平铺拉伸，而不是1x1像素
+        return [self resizableImageWithCapInsets:capInsets];
+    } else {
+        // `stretchableImageWithLeftCapWidth:topCapHeight` 只能以1x1的像素进行拉伸
+        return [self stretchableImageWithLeftCapWidth:capInsets.left topCapHeight:capInsets.top];
+    }
 }
 
 + (instancetype)captureWithView:(UIView *)view
@@ -75,4 +89,6 @@
     UIGraphicsEndImageContext();
     return clipImage;
 }
+
+
 @end

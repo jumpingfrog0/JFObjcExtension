@@ -16,6 +16,7 @@
 		08631D2B1F28FF30000D9BEE /* ObjcExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08631D2A1F28FF30000D9BEE /* ObjcExtensionTests.m */; };
 		08631D361F28FF30000D9BEE /* ObjcExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08631D351F28FF30000D9BEE /* ObjcExtensionUITests.m */; };
 		0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865FDEB1F2DD83900132029 /* UIImageTestController.m */; };
+		08922CD21F4B414A00E651BD /* UITabBar+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 08922CD11F4B414A00E651BD /* UITabBar+Swizzling.m */; };
 		0895F4521F2C4C050007CF9C /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4421F2C4C050007CF9C /* NSArray+Log.m */; };
 		0895F4531F2C4C050007CF9C /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4441F2C4C050007CF9C /* NSString+Extend.m */; };
 		0895F4541F2C4C050007CF9C /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4471F2C4C050007CF9C /* UIColor+Extend.m */; };
@@ -24,6 +25,7 @@
 		0895F4591F2C4C050007CF9C /* UIViewController+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4511F2C4C050007CF9C /* UIViewController+Extend.m */; };
 		08D326D31F3D6C0E00521788 /* UIButton+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D326D21F3D6C0E00521788 /* UIButton+Extend.m */; };
 		08D326D61F3D6DA600521788 /* UIButtonTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D326D51F3D6DA600521788 /* UIButtonTestViewController.m */; };
+		7AA680D68B9026C257EC802E /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68972B5AD8258807F9982 /* UIView+Extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		0865FDEA1F2DD83900132029 /* UIImageTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTestController.h; sourceTree = "<group>"; };
 		0865FDEB1F2DD83900132029 /* UIImageTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTestController.m; sourceTree = "<group>"; };
 		0865FDED1F2DE89600132029 /* ObjcExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcExtension-Prefix.pch"; sourceTree = "<group>"; };
+		08922CD01F4B414A00E651BD /* UITabBar+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Swizzling.h"; sourceTree = "<group>"; };
+		08922CD11F4B414A00E651BD /* UITabBar+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Swizzling.m"; sourceTree = "<group>"; };
 		0895F4411F2C4C050007CF9C /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		0895F4421F2C4C050007CF9C /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		0895F4431F2C4C050007CF9C /* NSString+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		08D326D21F3D6C0E00521788 /* UIButton+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extend.m"; sourceTree = "<group>"; };
 		08D326D41F3D6DA600521788 /* UIButtonTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonTestViewController.h; sourceTree = "<group>"; };
 		08D326D51F3D6DA600521788 /* UIButtonTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonTestViewController.m; sourceTree = "<group>"; };
+		7AA68972B5AD8258807F9982 /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
+		7AA68D0D8B26F11DE08772C6 /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,9 +181,19 @@
 			path = ObjcExtensionUITests;
 			sourceTree = "<group>";
 		};
+		08922CCF1F4B412800E651BD /* Swizzling */ = {
+			isa = PBXGroup;
+			children = (
+				08922CD01F4B414A00E651BD /* UITabBar+Swizzling.h */,
+				08922CD11F4B414A00E651BD /* UITabBar+Swizzling.m */,
+			);
+			path = Swizzling;
+			sourceTree = "<group>";
+		};
 		0895F43F1F2C4C050007CF9C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				08922CCF1F4B412800E651BD /* Swizzling */,
 				0895F4401F2C4C050007CF9C /* Foundation */,
 				0895F4451F2C4C050007CF9C /* UIKit */,
 			);
@@ -210,6 +226,8 @@
 				0895F4511F2C4C050007CF9C /* UIViewController+Extend.m */,
 				08D326D11F3D6C0E00521788 /* UIButton+Extend.h */,
 				08D326D21F3D6C0E00521788 /* UIButton+Extend.m */,
+				7AA68972B5AD8258807F9982 /* UIView+Extend.m */,
+				7AA68D0D8B26F11DE08772C6 /* UIView+Extend.h */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -361,7 +379,9 @@
 				08D326D61F3D6DA600521788 /* UIButtonTestViewController.m in Sources */,
 				0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */,
 				0895F4581F2C4C050007CF9C /* UIView+Frame.m in Sources */,
+				08922CD21F4B414A00E651BD /* UITabBar+Swizzling.m in Sources */,
 				0895F4531F2C4C050007CF9C /* NSString+Extend.m in Sources */,
+				7AA680D68B9026C257EC802E /* UIView+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,3 +42,7 @@
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
 @end
+
+@interface UIView (Drawing)
+
+@end

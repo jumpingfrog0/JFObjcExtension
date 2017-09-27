@@ -1,10 +1,8 @@
 //
-//  UIImageTestController.m
+//  UITabBar+Swizzling.h
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
-//
-//
+//  Created by jumpingfrog0 on 22/08/2017.
 //  Copyright (c) 2017 Jumpingfrog0 LLC
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,24 +24,10 @@
 //  THE SOFTWARE.
 //
 
-#import "UIImageTestController.h"
-#import "UIImage+Extend.h"
-#import "UIView+Frame.h"
+#import <UIKit/UIKit.h>
 
-@interface UIImageTestController ()
-@property (weak, nonatomic) IBOutlet UIImageView *bubbleView;
-@property (weak, nonatomic) IBOutlet UIImageView *captureView;
+UIKIT_EXTERN BOOL swizzleEnabled;
+
+@interface UITabBar (Swizzling)
 
 @end
-
-@implementation UIImageTestController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.bubbleView.image = [UIImage resizableImageNamed:@"bubble"];
-    self.captureView.image = [UIImage captureWithView:self.view];
-}
-
-@end
-

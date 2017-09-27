@@ -27,7 +27,6 @@
 //
 
 #import "AppDelegate.h"
-#import "NSString+Extend.h"
 
 @interface AppDelegate ()
 

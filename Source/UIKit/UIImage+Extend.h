@@ -37,7 +37,12 @@
 /**
  *  返回一张可以随意拉伸不变形的图片
  */
-+ (UIImage *)resizableImage:(NSString *)name;
++ (UIImage *)resizableImageNamed:(NSString *)name;
+
+/**
+ 图片自动拉伸
+ */
+- (UIImage *)autoResize;
 
 /// 截取指定view的快照
 + (instancetype)captureWithView:(UIView *)view;
