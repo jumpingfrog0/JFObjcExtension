@@ -1,5 +1,5 @@
 //
-//  UIButtonTestViewController.h
+//  UIButtonTestController.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 11/08/2017.
@@ -26,8 +26,19 @@
 //  THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "UIButtonTestController.h"
+#import "UIButton+Extend.h"
 
-@interface UIButtonTestViewController : UIViewController
+@interface UIButtonTestController ()
+@property (weak, nonatomic) IBOutlet UIButton *bananaButton;
+@end
+
+@implementation UIButtonTestController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.bananaButton alignVerticalWithSpacing:4.0 bottomPadding: 4.0];
+}
 
 @end

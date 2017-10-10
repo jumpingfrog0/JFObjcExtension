@@ -28,8 +28,9 @@
 
 #import "ViewController.h"
 #import "UIImageTestController.h"
+#import "UIButtonTestController.h"
+#import "UIViewTestController.h"
 #import "UIViewController+Extend.h"
-#import "UIButtonTestViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, copy) NSArray *modules;
@@ -38,8 +39,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
+
     self.modules = @[@"Foundation", @"UIKit"];
     self.categories = @[
                    @[@"NSArray", @"NSString"],
@@ -56,7 +56,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ((NSArray *)self.categories[section]).count;
+    return ((NSArray *)self.categories[(NSUInteger) section]).count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -64,21 +64,23 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CategoryCell"];
     }
-    cell.textLabel.text = self.categories[indexPath.section][indexPath.row];
+    cell.textLabel.text = self.categories[(NSUInteger) indexPath.section][(NSUInteger) indexPath.row];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.modules[section];
+    return self.modules[(NSUInteger) section];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *category = self.categories[indexPath.section][indexPath.row];
+    NSString *category = self.categories[(NSUInteger) indexPath.section][(NSUInteger) indexPath.row];
     
     if ([category isEqualToString:@"UIImage"]) {
         [UIImageTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     } else if ([category isEqualToString:@"UIButton"]) {
-        [UIButtonTestViewController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+        [UIButtonTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+    } else if ([category isEqualToString:@"UIView"]) {
+        [UIViewTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     }
 }
 @end

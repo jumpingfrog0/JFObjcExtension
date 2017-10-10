@@ -147,7 +147,3 @@
     return self.frame.origin;\
 }
 @end
-
-@implementation UIView (Drawing)
-
-@end

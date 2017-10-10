@@ -59,7 +59,7 @@
     UIImage *origin = [UIImage imageNamed:name];
     
 #ifdef DEBUG
-    NSAssert(normal != nil, @"The resizable image should not be nil.");
+    NSAssert(origin != nil, @"The resizable image should not be nil.");
 #else
     NSLog(@"The resizable image should not be nil.");
 #endif

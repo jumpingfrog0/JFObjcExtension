@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sqX-aS-r54">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sqX-aS-r54">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,10 +19,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yig-6v-opK">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yig-6v-opK" id="5CD-K4-HQj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -36,6 +36,7 @@
                     <connections>
                         <segue destination="JJ2-Y1-AJB" kind="show" id="aEh-pI-x7w"/>
                         <segue destination="QHb-8W-ebC" kind="show" id="9OM-oN-KUH"/>
+                        <segue destination="noe-8U-Rbd" kind="show" id="lx3-le-LAe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTq-Zx-hlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -90,10 +91,98 @@
             </objects>
             <point key="canvasLocation" x="36" y="-25.637181409295355"/>
         </scene>
-        <!--Button Test View Controller-->
+        <!--UIView Extension-->
+        <scene sceneID="ttX-nc-Qav">
+            <objects>
+                <viewController storyboardIdentifier="UIViewTestController" id="noe-8U-Rbd" customClass="UIViewTestController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kY7-a7-jxm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ywH-vJ-Dit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t8j-of-gIS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpF-ZI-aib">
+                                <rect key="frame" x="16" y="78" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bma-G7-j92">
+                                <rect key="frame" x="124" y="186" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mpk-NB-SBI">
+                                <rect key="frame" x="16" y="186" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-4d-fJ2">
+                                <rect key="frame" x="232" y="78" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYo-OW-nJE">
+                                <rect key="frame" x="124" y="78" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEF-8m-L0N">
+                                <rect key="frame" x="232" y="186" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-2V-1Jr">
+                                <rect key="frame" x="16" y="304" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWT-Rj-szA">
+                                <rect key="frame" x="16" y="380" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-7d-4FZ">
+                                <rect key="frame" x="16" y="342" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZoR-cB-Mf6">
+                                <rect key="frame" x="16" y="418" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beauty2" translatesAutoresizingMaskIntoConstraints="NO" id="lsf-TM-qVH">
+                                <rect key="frame" x="16" y="469" width="275" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UIView Extension" id="1hw-5O-agK"/>
+                    <connections>
+                        <outlet property="beautyView" destination="lsf-TM-qVH" id="FWI-wE-G1y"/>
+                        <outlet property="view1" destination="rpF-ZI-aib" id="Do5-ZF-u8Z"/>
+                        <outlet property="view10" destination="ZoR-cB-Mf6" id="mJd-D0-8Ff"/>
+                        <outlet property="view2" destination="oYo-OW-nJE" id="V7P-5V-NQ3"/>
+                        <outlet property="view3" destination="5Zd-4d-fJ2" id="x7G-Z1-rST"/>
+                        <outlet property="view4" destination="Mpk-NB-SBI" id="dQh-Bf-Vz9"/>
+                        <outlet property="view5" destination="Bma-G7-j92" id="VnZ-jE-VpN"/>
+                        <outlet property="view6" destination="PEF-8m-L0N" id="eHJ-DG-fCf"/>
+                        <outlet property="view7" destination="5ci-2V-1Jr" id="qfd-kL-one"/>
+                        <outlet property="view8" destination="q9R-7d-4FZ" id="g5w-3p-GwJ"/>
+                        <outlet property="view9" destination="dWT-Rj-szA" id="zZI-AG-KKo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CcA-2D-9jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="622.93853073463276"/>
+        </scene>
+        <!--UIButton+Extend-->
         <scene sceneID="jdV-zT-yFz">
             <objects>
-                <viewController storyboardIdentifier="UIButtonTestViewController" id="QHb-8W-ebC" customClass="UIButtonTestViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIButtonTestController" id="QHb-8W-ebC" customClass="UIButtonTestController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="asr-DZ-pkT"/>
                         <viewControllerLayoutGuide type="bottom" id="fo4-FZ-aG2"/>
@@ -112,6 +201,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="UIButton+Extend" id="xsr-3v-heE"/>
                     <connections>
                         <outlet property="bananaButton" destination="9hW-bw-Iju" id="IEj-5j-NHi"/>
                     </connections>
@@ -139,5 +229,6 @@
     </scenes>
     <resources>
         <image name="banana" width="40" height="40"/>
+        <image name="beauty2" width="1200" height="800"/>
     </resources>
 </document>

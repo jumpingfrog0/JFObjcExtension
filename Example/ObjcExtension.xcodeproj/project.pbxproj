@@ -23,9 +23,12 @@
 		0895F4551F2C4C050007CF9C /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4491F2C4C050007CF9C /* UIImage+Extend.m */; };
 		0895F4581F2C4C050007CF9C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F44F1F2C4C050007CF9C /* UIView+Frame.m */; };
 		0895F4591F2C4C050007CF9C /* UIViewController+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4511F2C4C050007CF9C /* UIViewController+Extend.m */; };
+		08AAF6121F7E46AA002A001A /* UIViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08AAF6111F7E46AA002A001A /* UIViewTestController.m */; };
 		08D326D31F3D6C0E00521788 /* UIButton+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D326D21F3D6C0E00521788 /* UIButton+Extend.m */; };
-		08D326D61F3D6DA600521788 /* UIButtonTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D326D51F3D6DA600521788 /* UIButtonTestViewController.m */; };
+		08D326D61F3D6DA600521788 /* UIButtonTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D326D51F3D6DA600521788 /* UIButtonTestController.m */; };
 		7AA680D68B9026C257EC802E /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68972B5AD8258807F9982 /* UIView+Extend.m */; };
+		7AA68C174E6146E014D1F586 /* UIView+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68AA8E4B67033B3D8E63D /* UIView+Drawing.m */; };
+		7AA68E584A4EF4CA1E6EEE0C /* UIDevice+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68042604263D762A56DD4 /* UIDevice+Extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,11 +83,17 @@
 		0895F4501F2C4C050007CF9C /* UIViewController+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extend.h"; sourceTree = "<group>"; };
 		0895F4511F2C4C050007CF9C /* UIViewController+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extend.m"; sourceTree = "<group>"; };
 		0895F45A1F2D01F20007CF9C /* LogMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogMacros.h; sourceTree = "<group>"; };
+		08AAF6101F7E46AA002A001A /* UIViewTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTestController.h; sourceTree = "<group>"; };
+		08AAF6111F7E46AA002A001A /* UIViewTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTestController.m; sourceTree = "<group>"; };
 		08D326D11F3D6C0E00521788 /* UIButton+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extend.h"; sourceTree = "<group>"; };
 		08D326D21F3D6C0E00521788 /* UIButton+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extend.m"; sourceTree = "<group>"; };
-		08D326D41F3D6DA600521788 /* UIButtonTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonTestViewController.h; sourceTree = "<group>"; };
-		08D326D51F3D6DA600521788 /* UIButtonTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonTestViewController.m; sourceTree = "<group>"; };
+		08D326D41F3D6DA600521788 /* UIButtonTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonTestController.h; sourceTree = "<group>"; };
+		08D326D51F3D6DA600521788 /* UIButtonTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonTestController.m; sourceTree = "<group>"; };
+		7AA68042604263D762A56DD4 /* UIDevice+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extend.m"; sourceTree = "<group>"; };
+		7AA68726DDFF4825785717C1 /* UIView+Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Drawing.h"; sourceTree = "<group>"; };
+		7AA6892593A4AB285EEBEA53 /* UIDevice+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extend.h"; sourceTree = "<group>"; };
 		7AA68972B5AD8258807F9982 /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
+		7AA68AA8E4B67033B3D8E63D /* UIView+Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Drawing.m"; sourceTree = "<group>"; };
 		7AA68D0D8B26F11DE08772C6 /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,8 +152,10 @@
 				08631D171F28FF30000D9BEE /* ViewController.m */,
 				0865FDEA1F2DD83900132029 /* UIImageTestController.h */,
 				0865FDEB1F2DD83900132029 /* UIImageTestController.m */,
-				08D326D41F3D6DA600521788 /* UIButtonTestViewController.h */,
-				08D326D51F3D6DA600521788 /* UIButtonTestViewController.m */,
+				08AAF6101F7E46AA002A001A /* UIViewTestController.h */,
+				08AAF6111F7E46AA002A001A /* UIViewTestController.m */,
+				08D326D41F3D6DA600521788 /* UIButtonTestController.h */,
+				08D326D51F3D6DA600521788 /* UIButtonTestController.m */,
 				0865FDED1F2DE89600132029 /* ObjcExtension-Prefix.pch */,
 				08631D191F28FF30000D9BEE /* Main.storyboard */,
 				08631D1C1F28FF30000D9BEE /* Assets.xcassets */,
@@ -228,6 +239,10 @@
 				08D326D21F3D6C0E00521788 /* UIButton+Extend.m */,
 				7AA68972B5AD8258807F9982 /* UIView+Extend.m */,
 				7AA68D0D8B26F11DE08772C6 /* UIView+Extend.h */,
+				7AA68AA8E4B67033B3D8E63D /* UIView+Drawing.m */,
+				7AA68726DDFF4825785717C1 /* UIView+Drawing.h */,
+				7AA68042604263D762A56DD4 /* UIDevice+Extend.m */,
+				7AA6892593A4AB285EEBEA53 /* UIDevice+Extend.h */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -376,12 +391,15 @@
 				08D326D31F3D6C0E00521788 /* UIButton+Extend.m in Sources */,
 				08631D151F28FF30000D9BEE /* AppDelegate.m in Sources */,
 				08631D121F28FF30000D9BEE /* main.m in Sources */,
-				08D326D61F3D6DA600521788 /* UIButtonTestViewController.m in Sources */,
+				08AAF6121F7E46AA002A001A /* UIViewTestController.m in Sources */,
+				08D326D61F3D6DA600521788 /* UIButtonTestController.m in Sources */,
 				0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */,
 				0895F4581F2C4C050007CF9C /* UIView+Frame.m in Sources */,
 				08922CD21F4B414A00E651BD /* UITabBar+Swizzling.m in Sources */,
 				0895F4531F2C4C050007CF9C /* NSString+Extend.m in Sources */,
 				7AA680D68B9026C257EC802E /* UIView+Extend.m in Sources */,
+				7AA68C174E6146E014D1F586 /* UIView+Drawing.m in Sources */,
+				7AA68E584A4EF4CA1E6EEE0C /* UIDevice+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
