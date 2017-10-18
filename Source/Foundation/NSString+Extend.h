@@ -42,9 +42,9 @@
 - (NSString *)SHA1;
 
 /**
- *  根据一个正则表达式在字符串中查找符合条件的子串
+ * 根据一个正则表达式在字符串中查找符合条件的子串
  *
- *  @param regular 正则表达式
+ * @param regular 正则表达式
  */
 - (NSMutableArray *)subStringByRegular:(NSString *)regular;
 

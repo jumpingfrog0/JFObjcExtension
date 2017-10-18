@@ -30,12 +30,12 @@
 
 @interface UIImage (Extend)
 /**
- *  生成一张打好水印的图片
+ * 生成一张打好水印的图片
  */
 + (instancetype)generateWithWatermark:(UIImage *)watermark ForImage:(UIImage *)image;
 
 /**
- *  返回一张可以随意拉伸不变形的图片
+ * 返回一张可以随意拉伸不变形的图片
  */
 + (UIImage *)resizableImageNamed:(NSString *)name;
 

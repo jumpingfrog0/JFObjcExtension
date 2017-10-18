@@ -30,10 +30,28 @@
 
 @interface UIButton (Extend)
 /**
- 设置按钮的图片和文字垂直对齐
- 
- @param spacing 图片与文字的间距
- @param bottomPadding 文字距离底部的间距
+ * 设置按钮的图片和文字垂直对齐
+ * @param spacing 图片与文字的间距
+ * @param bottomPadding 文字距离底部的间距
  */
 - (void)alignVerticalWithSpacing:(CGFloat)spacing bottomPadding:(CGFloat)bottomPadding;
+
+/**
+ * 设置按钮的图片和文字居中垂直对齐
+ * @param spacing 图片与文字的间距
+ */
+- (void)alignVerticalWithSpacing:(CGFloat)spacing;
+
+/**
+ * 设置按钮的图片和文字居中水平对齐
+ * @param spacing 图片与文字的间距
+ */
+- (void)alignHorizontalWithSpacing:(CGFloat)spacing;
+
+/**
+ * 设置指定范围内的按钮文字颜色
+ * @param color 颜色
+ * @param range 范围
+ */
+- (void)setTitleColor:(UIColor *)color range:(NSRange)range;
 @end

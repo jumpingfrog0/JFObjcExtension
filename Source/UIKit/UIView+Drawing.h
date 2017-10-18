@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
 
 @interface UIView (Drawing)
 /**
- * @brief 设置圆形镂空效果
+ * 设置圆形镂空效果
  * @param color 不透明区域的颜色
  * @param radius 圆形半径
  * @param center 圆心
@@ -21,21 +21,21 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
 - (void)setCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius center:(CGPoint)center;
 
 /**
- * @brief 设置居中的圆形镂空效果
+ * 设置居中的圆形镂空效果
  * @param color 不透明区域的颜色
  * @param radius 圆形半径
  */
 - (void)setCenterCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius;
 
 /**
- * @brief 设置矩形镂空效果
+ * 设置矩形镂空效果
  * @param color 不透明区域的颜色
  * @param rect 矩形区域
  */
 - (void)setHollowWithMaskColor:(UIColor *)color rect:(CGRect)rect;
 
 /**
- * @brief 设置环形进度条
+ * 设置环形进度条
  * @param progress 当前进度
  * @param color 进度条颜色
  * @param width 进度条宽度
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
 - (void)addCycleProgress:(CGFloat)progress color:(UIColor *)color width:(CGFloat)width;
 
 /**
- * @brief 添加一个圆形图层
+ * 添加一个圆形图层
  * @param color 图层颜色
  * @param width 图层宽度
  * @param radius 圆形半径
@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
 - (void)addCircleLayerWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius;
 
 /**
- * @brief 添加一个矩形图层
+ * 添加一个矩形图层
  * @param color 图层颜色
  * @param width 图层宽度
  * @param rect 矩形区域

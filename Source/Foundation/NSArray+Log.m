@@ -34,7 +34,7 @@
 @implementation NSArray (Log)
 
 /**
- *  针对中文编码格式化数组调试信息
+ * 针对中文编码格式化数组调试信息
  */
 - (NSString *)descriptionWithLocale:(id)locale
 {
