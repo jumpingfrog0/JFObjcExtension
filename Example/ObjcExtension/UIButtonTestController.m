@@ -31,6 +31,8 @@
 
 @interface UIButtonTestController ()
 @property (weak, nonatomic) IBOutlet UIButton *bananaButton;
+@property (weak, nonatomic) IBOutlet UIButton *bananaButton2;
+@property (weak, nonatomic) IBOutlet UIButton *bananaButton3;
 @end
 
 @implementation UIButtonTestController
@@ -39,6 +41,8 @@
     [super viewDidLoad];
     
     [self.bananaButton alignVerticalWithSpacing:4.0 bottomPadding: 4.0];
+    [self.bananaButton2 alignVerticalWithSpacing:4.0];
+    [self.bananaButton3 alignHorizontalWithSpacing:20.0];
 }
 
 @end

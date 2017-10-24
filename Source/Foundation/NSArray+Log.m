@@ -25,8 +25,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-
 //
 
 #import "NSArray+Log.h"
@@ -34,15 +32,26 @@
 @implementation NSArray (Log)
 
 /**
- * 针对中文编码格式化数组调试信息
+ * NSLog格式化打印支持UTF8编码
+ * 参考：http://www.jianshu.com/p/4ce287f0c2c3
  */
-- (NSString *)descriptionWithLocale:(id)locale
+- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
 {
-    NSMutableString *strM = [NSMutableString stringWithFormat:@"(\n"];
-    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [strM appendFormat:@"\t%@,\n",obj];
+    NSMutableString *strM = [NSMutableString string];
+    NSMutableString *tab = [NSMutableString stringWithString:@""];
+    for (int i = 0; i < level; i++) {
+        [tab appendString:@"\t"];
+    }
+    [strM appendString:@"(\n"];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *lastSymbol = (self.count == idx + 1) ? @"":@",";
+        if ([obj respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
+            [strM appendFormat:@"\t%@%@%@\n",tab, [obj descriptionWithLocale:locale indent:level + 1], lastSymbol];
+        } else {
+            [strM appendFormat:@"\t%@%@%@\n",tab, obj, lastSymbol];
+        }
     }];
-    [strM appendString:@")"];
+    [strM appendFormat:@"%@)",tab];
     return strM;
 }
 @end

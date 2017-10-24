@@ -9,6 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--NSArray-->
+        <scene sceneID="tnV-M5-QQv">
+            <objects>
+                <viewController storyboardIdentifier="NSArrayTestController" id="aaC-GV-1Ch" customClass="NSArrayTestController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNI-2S-25h"/>
+                        <viewControllerLayoutGuide type="bottom" id="kvw-aA-knC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hJJ-mg-5qn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NSArray" id="KoY-0Y-fLg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEi-Wv-DTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="-667"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="rdq-Mi-XpT">
             <objects>
@@ -37,6 +56,8 @@
                         <segue destination="JJ2-Y1-AJB" kind="show" id="aEh-pI-x7w"/>
                         <segue destination="QHb-8W-ebC" kind="show" id="9OM-oN-KUH"/>
                         <segue destination="noe-8U-Rbd" kind="show" id="lx3-le-LAe"/>
+                        <segue destination="aaC-GV-1Ch" kind="show" id="nhS-Bl-Rq2"/>
+                        <segue destination="p5m-tp-5hg" kind="show" id="NDA-VJ-wNu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTq-Zx-hlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,7 +213,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hW-bw-Iju">
-                                <rect key="frame" x="135" y="323" width="94" height="40"/>
+                                <rect key="frame" x="133" y="104" width="94" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="主页" image="banana"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7t-pu-3zs">
+                                <rect key="frame" x="132" y="179" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="主页" image="banana"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUo-fR-CdB">
+                                <rect key="frame" x="132" y="298" width="94" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -204,11 +239,13 @@
                     <navigationItem key="navigationItem" title="UIButton+Extend" id="xsr-3v-heE"/>
                     <connections>
                         <outlet property="bananaButton" destination="9hW-bw-Iju" id="IEj-5j-NHi"/>
+                        <outlet property="bananaButton2" destination="t7t-pu-3zs" id="tp6-vh-YfG"/>
+                        <outlet property="bananaButton3" destination="fUo-fR-CdB" id="Q2D-Li-0it"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2d-IL-tEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="623"/>
+            <point key="canvasLocation" x="36" y="622.93853073463276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lP0-g1-pqj">
@@ -225,6 +262,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FH-fm-5WL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1335" y="-23"/>
+        </scene>
+        <!--NSDictionary-->
+        <scene sceneID="fWY-VQ-AHO">
+            <objects>
+                <viewController storyboardIdentifier="NSDictionaryTestController" id="p5m-tp-5hg" customClass="NSDictionaryTestController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="giq-WF-AiY"/>
+                        <viewControllerLayoutGuide type="bottom" id="LrA-eB-igB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gqj-4D-G9m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NSDictionary" id="M9o-tw-Xhv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaD-cO-Tr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-667"/>
         </scene>
     </scenes>
     <resources>

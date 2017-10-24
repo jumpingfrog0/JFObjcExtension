@@ -31,6 +31,8 @@
 #import "UIButtonTestController.h"
 #import "UIViewTestController.h"
 #import "UIViewController+Extend.h"
+#import "NSArrayTestController.h"
+#import "NSDictionaryTestController.h"
 
 @interface ViewController ()
 @property (nonatomic, copy) NSArray *modules;
@@ -42,7 +44,7 @@
 
     self.modules = @[@"Foundation", @"UIKit"];
     self.categories = @[
-                   @[@"NSArray", @"NSString"],
+                   @[@"NSArray", @"NSDictionary", @"NSString"],
                    @[@"UIColor", @"UIImage", @"UIImageView", @"UIView", @"UIButton", @"UIViewController"],
                    ];
     self.tableView.dataSource = self;
@@ -81,6 +83,10 @@
         [UIButtonTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     } else if ([category isEqualToString:@"UIView"]) {
         [UIViewTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+    } else if ([category isEqualToString:@"NSArray"]) {
+        [NSArrayTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+    } else if ([category isEqualToString:@"NSDictionary"]) {
+        [NSDictionaryTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     }
 }
 @end

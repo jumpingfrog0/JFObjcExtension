@@ -51,6 +51,11 @@
     [navVc pushViewController:controller animated:YES];
 }
 
++ (void)pushInNavigationController:(UINavigationController *)navVc {
+    UIViewController *controller = [[self alloc] init];
+    [navVc pushViewController:controller animated:YES];
+}
+
 - (void)present:(__kindof UIViewController *)viewControllerToPresent fromStoryboard:(NSString *)storyboardName inNavigationController:(__kindof UINavigationController *)navigationController {
     UIViewController *vc = [viewControllerToPresent instantiateFromStoryboardWithName:storyboardName];
     UINavigationController *navigation = [navigationController initWithRootViewController:vc];
