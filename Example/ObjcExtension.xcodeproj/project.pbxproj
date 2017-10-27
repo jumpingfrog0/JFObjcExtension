@@ -17,6 +17,8 @@
 		08631D361F28FF30000D9BEE /* ObjcExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08631D351F28FF30000D9BEE /* ObjcExtensionUITests.m */; };
 		086393901F9FA0A1007C0D3F /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0863938F1F9FA0A1007C0D3F /* NSDictionary+Log.m */; };
 		086393931F9FA18C007C0D3F /* NSDictionaryTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 086393921F9FA18C007C0D3F /* NSDictionaryTestController.m */; };
+		086393961F9FA6E4007C0D3F /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 086393951F9FA6E4007C0D3F /* NSDate+Utilities.m */; };
+		086393991F9FA8B5007C0D3F /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 086393981F9FA8B5007C0D3F /* NSDate+Extend.m */; };
 		0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865FDEB1F2DD83900132029 /* UIImageTestController.m */; };
 		08922CD21F4B414A00E651BD /* UITabBar+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 08922CD11F4B414A00E651BD /* UITabBar+Swizzling.m */; };
 		0895F4521F2C4C050007CF9C /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0895F4421F2C4C050007CF9C /* NSArray+Log.m */; };
@@ -30,6 +32,7 @@
 		08D326D61F3D6DA600521788 /* UIButtonTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D326D51F3D6DA600521788 /* UIButtonTestController.m */; };
 		7AA680D68B9026C257EC802E /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68972B5AD8258807F9982 /* UIView+Extend.m */; };
 		7AA688509A6F58C6D0954078 /* MZDGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68C22D07A5D6C27070500 /* MZDGeometry.m */; };
+		7AA6896C2D5C816225D0EDCA /* NSCalendar+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68EB33A9D11AF38DE3A5C /* NSCalendar+Extend.m */; };
 		7AA68C174E6146E014D1F586 /* UIView+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68AA8E4B67033B3D8E63D /* UIView+Drawing.m */; };
 		7AA68CA3E132C07469B08D44 /* NSArrayTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6854556CCBDA19B757D1B /* NSArrayTestController.m */; };
 		7AA68E584A4EF4CA1E6EEE0C /* UIDevice+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA68042604263D762A56DD4 /* UIDevice+Extend.m */; };
@@ -73,6 +76,10 @@
 		0863938F1F9FA0A1007C0D3F /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		086393911F9FA18C007C0D3F /* NSDictionaryTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTestController.h; sourceTree = "<group>"; };
 		086393921F9FA18C007C0D3F /* NSDictionaryTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTestController.m; sourceTree = "<group>"; };
+		086393941F9FA6E4007C0D3F /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		086393951F9FA6E4007C0D3F /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		086393971F9FA8B5007C0D3F /* NSDate+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extend.h"; sourceTree = "<group>"; };
+		086393981F9FA8B5007C0D3F /* NSDate+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extend.m"; sourceTree = "<group>"; };
 		0865FDEA1F2DD83900132029 /* UIImageTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTestController.h; sourceTree = "<group>"; };
 		0865FDEB1F2DD83900132029 /* UIImageTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTestController.m; sourceTree = "<group>"; };
 		0865FDED1F2DE89600132029 /* ObjcExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjcExtension-Prefix.pch"; sourceTree = "<group>"; };
@@ -98,6 +105,7 @@
 		08D326D41F3D6DA600521788 /* UIButtonTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonTestController.h; sourceTree = "<group>"; };
 		08D326D51F3D6DA600521788 /* UIButtonTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonTestController.m; sourceTree = "<group>"; };
 		7AA68042604263D762A56DD4 /* UIDevice+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extend.m"; sourceTree = "<group>"; };
+		7AA682C08979C3089FA38EAB /* NSCalendar+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Extend.h"; sourceTree = "<group>"; };
 		7AA6854556CCBDA19B757D1B /* NSArrayTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTestController.m; sourceTree = "<group>"; };
 		7AA68726DDFF4825785717C1 /* UIView+Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Drawing.h"; sourceTree = "<group>"; };
 		7AA688982A65BC1A33C64B7E /* MZDGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDGeometry.h; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 		7AA68AA8E4B67033B3D8E63D /* UIView+Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Drawing.m"; sourceTree = "<group>"; };
 		7AA68C22D07A5D6C27070500 /* MZDGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDGeometry.m; sourceTree = "<group>"; };
 		7AA68D0D8B26F11DE08772C6 /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
+		7AA68EB33A9D11AF38DE3A5C /* NSCalendar+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Extend.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,10 +244,16 @@
 				0895F45A1F2D01F20007CF9C /* LogMacros.h */,
 				0895F4411F2C4C050007CF9C /* NSArray+Log.h */,
 				0895F4421F2C4C050007CF9C /* NSArray+Log.m */,
+				086393941F9FA6E4007C0D3F /* NSDate+Utilities.h */,
+				086393951F9FA6E4007C0D3F /* NSDate+Utilities.m */,
+				086393971F9FA8B5007C0D3F /* NSDate+Extend.h */,
+				086393981F9FA8B5007C0D3F /* NSDate+Extend.m */,
 				0863938E1F9FA0A1007C0D3F /* NSDictionary+Log.h */,
 				0863938F1F9FA0A1007C0D3F /* NSDictionary+Log.m */,
 				0895F4431F2C4C050007CF9C /* NSString+Extend.h */,
 				0895F4441F2C4C050007CF9C /* NSString+Extend.m */,
+				7AA682C08979C3089FA38EAB /* NSCalendar+Extend.h */,
+				7AA68EB33A9D11AF38DE3A5C /* NSCalendar+Extend.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -425,13 +440,16 @@
 				0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */,
 				0895F4581F2C4C050007CF9C /* UIView+Frame.m in Sources */,
 				08922CD21F4B414A00E651BD /* UITabBar+Swizzling.m in Sources */,
+				086393991F9FA8B5007C0D3F /* NSDate+Extend.m in Sources */,
 				086393901F9FA0A1007C0D3F /* NSDictionary+Log.m in Sources */,
+				086393961F9FA6E4007C0D3F /* NSDate+Utilities.m in Sources */,
 				0895F4531F2C4C050007CF9C /* NSString+Extend.m in Sources */,
 				7AA680D68B9026C257EC802E /* UIView+Extend.m in Sources */,
 				7AA68C174E6146E014D1F586 /* UIView+Drawing.m in Sources */,
 				7AA68E584A4EF4CA1E6EEE0C /* UIDevice+Extend.m in Sources */,
 				7AA688509A6F58C6D0954078 /* MZDGeometry.m in Sources */,
 				7AA68CA3E132C07469B08D44 /* NSArrayTestController.m in Sources */,
+				7AA6896C2D5C816225D0EDCA /* NSCalendar+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
