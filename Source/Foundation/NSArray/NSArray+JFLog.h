@@ -1,5 +1,5 @@
 //
-//  NSArray+Log.m
+//  NSArray+JFLog.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -25,33 +25,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//
 
-#import "NSArray+Log.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSArray (Log)
+@interface NSArray (JFLog)
 
-/**
- * NSLog格式化打印支持UTF8编码
- * 参考：http://www.jianshu.com/p/4ce287f0c2c3
- */
-- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
-{
-    NSMutableString *strM = [NSMutableString string];
-    NSMutableString *tab = [NSMutableString stringWithString:@""];
-    for (int i = 0; i < level; i++) {
-        [tab appendString:@"\t"];
-    }
-    [strM appendString:@"(\n"];
-    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *lastSymbol = (self.count == idx + 1) ? @"":@",";
-        if ([obj respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
-            [strM appendFormat:@"\t%@%@%@\n",tab, [obj descriptionWithLocale:locale indent:level + 1], lastSymbol];
-        } else {
-            [strM appendFormat:@"\t%@%@%@\n",tab, obj, lastSymbol];
-        }
-    }];
-    [strM appendFormat:@"%@)",tab];
-    return strM;
-}
 @end

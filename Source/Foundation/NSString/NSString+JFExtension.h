@@ -1,5 +1,5 @@
 //
-//  NSString+Extend.h
+//  NSString+JFExtension.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -29,7 +29,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface NSString (Extend)
+@interface NSString (JFExtension)
 
 - (CGFloat)suitableWidthWithFont:(UIFont *)font height:(CGFloat)height;
 - (CGFloat)suitableHeightWithFont:(UIFont *)font width:(CGFloat)width;

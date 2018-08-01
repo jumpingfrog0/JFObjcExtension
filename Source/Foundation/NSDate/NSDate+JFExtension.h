@@ -1,5 +1,5 @@
 //
-//  NSDictionary+Log.h
+//  NSDate+JFExtension.h
 //  ObjcExtension
 //
 //  Created by sheldon on 25/10/2017.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (Log)
-
+@interface NSDate (JFExtension)
++(NSDate *)dateFromString:(NSString *)str format:(NSString *)format;
 @end

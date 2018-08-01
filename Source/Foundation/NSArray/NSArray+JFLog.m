@@ -1,8 +1,10 @@
 //
-//  UITabBar+Swizzling.h
+//  NSArray+JFLog.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 22/08/2017.
+//  Created by jumpingfrog0 on 27/07/2017.
+//
+//
 //  Copyright (c) 2017 Jumpingfrog0 LLC
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,11 +25,33 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+//
 
-#import <UIKit/UIKit.h>
+#import "NSArray+JFLog.h"
 
-UIKIT_EXTERN BOOL swizzleEnabled;
+@implementation NSArray (JFLog)
 
-@interface UITabBar (Swizzling)
-
+/**
+ * NSLog格式化打印支持UTF8编码
+ * 参考：http://www.jianshu.com/p/4ce287f0c2c3
+ */
+- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
+{
+    NSMutableString *strM = [NSMutableString string];
+    NSMutableString *tab = [NSMutableString stringWithString:@""];
+    for (int i = 0; i < level; i++) {
+        [tab appendString:@"\t"];
+    }
+    [strM appendString:@"(\n"];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *lastSymbol = (self.count == idx + 1) ? @"":@",";
+        if ([obj respondsToSelector:@selector(descriptionWithLocale:indent:)]) {
+            [strM appendFormat:@"\t%@%@%@\n",tab, [obj descriptionWithLocale:locale indent:level + 1], lastSymbol];
+        } else {
+            [strM appendFormat:@"\t%@%@%@\n",tab, obj, lastSymbol];
+        }
+    }];
+    [strM appendFormat:@"%@)",tab];
+    return strM;
+}
 @end

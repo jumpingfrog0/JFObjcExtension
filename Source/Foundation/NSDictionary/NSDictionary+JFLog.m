@@ -1,14 +1,14 @@
 //
-//  NSDictionary+Log.m
+//  NSDictionary+JFLog.m
 //  ObjcExtension
 //
 //  Created by sheldon on 25/10/2017.
 //  Copyright © 2017 jumpingfrog0. All rights reserved.
 //
 
-#import "NSDictionary+Log.h"
+#import "NSDictionary+JFLog.h"
 
-@implementation NSDictionary (Log)
+@implementation NSDictionary (JFLog)
 /**
  * NSLog格式化打印支持UTF8编码
  * 参考：http://www.jianshu.com/p/4ce287f0c2c3

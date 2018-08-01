@@ -1,10 +1,8 @@
 //
-//  NSArray+Log.h
+//  UITabBar+JFSwizzling.h
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
-//
-//
+//  Created by jumpingfrog0 on 22/08/2017.
 //  Copyright (c) 2017 Jumpingfrog0 LLC
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,8 +24,10 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSArray (Log)
+UIKIT_EXTERN BOOL swizzleEnabled;
+
+@interface UITabBar (JFSwizzling)
 
 @end

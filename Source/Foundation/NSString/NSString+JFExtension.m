@@ -1,5 +1,5 @@
 //
-//  NSString+Extend.m
+//  NSString+JFExtension.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -26,10 +26,10 @@
 //  THE SOFTWARE.
 //
 
-#import "NSString+Extend.h"
+#import "NSString+JFExtension.h"
 #import <CommonCrypto/CommonDigest.h>
 
-@implementation NSString (Extend)
+@implementation NSString (JFExtension)
 
 - (CGFloat)suitableWidthWithFont:(UIFont *)font height:(CGFloat)height
 {

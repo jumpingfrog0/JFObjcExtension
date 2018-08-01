@@ -28,10 +28,10 @@
 
 #import <XCTest/XCTest.h>
 #import "LogMacros.h"
-#import "NSDate+Extend.h"
+#import "NSDate+JFExtension.h"
 #import "NSDate+Utilities.h"
-#import "NSString+Extend.h"
-#import "NSCalendar+Extend.h"
+#import "NSString+JFExtension.h"
+#import "NSCalendar+JFExtension.h"
 
 @interface ObjcExtensionTests : XCTestCase
 
@@ -41,11 +41,9 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 

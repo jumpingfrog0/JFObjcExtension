@@ -1,5 +1,5 @@
 //
-//  NSCalendar+Extend.h
+//  NSCalendar+JFExtension.h
 //  ObjcExtension
 //
 //  Created by sheldon on 27/10/2017.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSCalendar (Extend)
+@interface NSCalendar (JFExtension)
 + (NSInteger)numberOfDaysInYear:(NSInteger)year;
 + (NSInteger)numberOfDaysInYear:(NSInteger)year month:(NSInteger)month;
 @end;

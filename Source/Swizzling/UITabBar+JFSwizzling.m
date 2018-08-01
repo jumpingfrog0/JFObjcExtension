@@ -1,5 +1,5 @@
 //
-//  UITabBar+Swizzling.m
+//  UITabBar+JFSwizzling.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 22/08/2017.
@@ -24,12 +24,12 @@
 //  THE SOFTWARE.
 //
 
-#import "UITabBar+Swizzling.h"
+#import "UITabBar+JFSwizzling.h"
 #import <objc/runtime.h>
 
 BOOL swizzleEnabled = NO;
 
-@implementation UITabBar (Swizzling)
+@implementation UITabBar (JFSwizzling)
 static void ExchangedMethod(SEL originalSelector, SEL swizzledSelector, Class class)
 {
 
