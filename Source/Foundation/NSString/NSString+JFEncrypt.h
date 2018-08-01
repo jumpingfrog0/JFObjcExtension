@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSString+JFEncrypt.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,34 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+@interface NSString (MZDEncrypt)
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
-}
+/**
+ *  计算字符串占用字节数
+ *
+ *  @return 字节数
+ */
+- (NSInteger)jf_bytes;
+
+/**
+ *  将 16 进制字符串转换为 10 进制数
+ *
+ *  @return 10 进制数
+ */
+- (NSUInteger)jf_hexValue;
+
+/**
+ *  计算所在位置为 filePath 的文件 MD5 值
+ */
++ (NSString *)jf_md5OfFile:(NSString *)filePath;
+
+
+- (NSString *)jf_md5;
+
+//- (NSString *)jf_sha1WithKey:(NSString *)key;
+
+/// 使用SHA1加密字符串
+- (NSString *)jf_SHA1;
 @end

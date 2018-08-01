@@ -1,5 +1,4 @@
-//
-//  NSCalendar+JFExtension.m
+// NSLocale+JFExtension.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +25,18 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import "NSLocale+JFExtension.h"
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+@implementation NSLocale (JFExtension)
++ (NSLocale *)jf_simplifiedChineseLocale {
+    static NSLocale *locale = nil;
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
+    NSString *localeIdentifier = [NSLocale.currentLocale localeIdentifier];
+    localeIdentifier = [localeIdentifier stringByReplacingCharactersInRange:NSMakeRange(0, 2) withString:@"zh-Hans"];
+
+    if (!locale || ![localeIdentifier isEqualToString:locale.localeIdentifier]) {
+        locale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
+    }
+    return locale;
 }
 @end

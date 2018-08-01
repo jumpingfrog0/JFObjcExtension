@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSString+JF.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,17 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#ifndef NSString_JF_h
+#define NSString_JF_h
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+#import "NSString+JFEncrypt.h"
+#import "NSString+JFJSON.h"
+#import "NSString+JFURL.h"
+#import "NSString+JFEncode.h"
+#import "NSString+JFBase64.h"
+#import "NSString+JFRender.h"
+#import "NSString+JFValidate.h"
+#import "NSString+JFCompare.h"
+#import "NSString+JFExtension.h"
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
-}
-@end
+#endif /* NSString_JF_h */

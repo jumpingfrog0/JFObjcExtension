@@ -30,10 +30,10 @@
     NSNumber *one = @(1);
     NSNumber *ten = @(10);
     NSNumber *number = @(123);
-    XCTAssertEqual(zero.length, 1);
-    XCTAssertEqual(one.length, 1);
-    XCTAssertEqual(ten.length, 2);
-    XCTAssertEqual(number.length, 3);
+    XCTAssertEqual(zero.jf_length, 1);
+    XCTAssertEqual(one.jf_length, 1);
+    XCTAssertEqual(ten.jf_length, 2);
+    XCTAssertEqual(number.jf_length, 3);
 }
 
 - (void)testPerformanceExample {

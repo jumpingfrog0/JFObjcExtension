@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSArray+JFExtension.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,16 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import "NSArray+JFExtension.h"
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
-
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
+@implementation NSArray (JFExtension)
+- (NSArray *)jf_reversed {
+    NSMutableArray *result = [NSMutableArray array];
+    NSEnumerator *reversed = self.reverseObjectEnumerator;
+    id obj;
+    while (obj = [reversed nextObject]) {
+        [result addObject:obj];
+    }
+    return [result copy];
 }
 @end

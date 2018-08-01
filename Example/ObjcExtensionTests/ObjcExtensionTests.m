@@ -29,9 +29,9 @@
 #import <XCTest/XCTest.h>
 #import "LogMacros.h"
 #import "NSDate+JFExtension.h"
-#import "NSDate+Utilities.h"
-#import "NSString+JFExtension.h"
+#import "NSDate+JFUtilities.h"
 #import "NSCalendar+JFExtension.h"
+#import "NSString+MZD.h"
 
 @interface ObjcExtensionTests : XCTestCase
 
@@ -54,35 +54,35 @@
 
 - (void)testNSString {
     NSString *str = @"testxxxxxtextxxtest";
-    NSArray *targetStrs = [str subStringByRegular:@"te\\St"];
+    NSArray *targetStrs = [str jf_subStringByRegular:@"te\\St"];
     XCTAssertEqualObjects(targetStrs[0], @"test");
     XCTAssertEqualObjects(targetStrs[1], @"text");
     XCTAssertEqualObjects(targetStrs[2], @"test");
     
     NSString *str2 = @"jumpingfrog0@gamil.com";
     NSString *str3 = @"jumpingfrog0gmail.com";
-    XCTAssertTrue([str2 isValidEmail]);
-    XCTAssertFalse([str3 isValidEmail]);
+    XCTAssertTrue([str2 jf_isValidEmail]);
+    XCTAssertFalse([str3 jf_isValidEmail]);
     
-    NSString *md5Str = [str MD5];
+    NSString *md5Str = [str jf_md5];
     XCTAssertEqualObjects(md5Str, @"a13f9320bfe0fab240bd587a8d3d5c45");
     
-    NSString *sha1Str = [str SHA1];
+    NSString *sha1Str = [str jf_SHA1];
     XCTAssertEqualObjects(sha1Str, @"82a434c73f0c6ffdb3379301c345d224c76fc4cd");
 }
 
 - (void)testNSDate {
     NSString *str = @"2017-10-24";
-    NSDate *date1 = [NSDate dateFromString:str format:@"yyyy-MM-dd"];
-    NSDate *date2 = [NSDate dateWithYear:2017 month:10 day:24];
+    NSDate *date1 = [NSDate jf_dateFromString:str format:@"yyyy-MM-dd"];
+    NSDate *date2 = [NSDate jf_dateWithYear:2017 month:10 day:24];
     XCTAssertEqualObjects(date1, date2);
 }
 
 - (void)testNSCalendar {
-    NSInteger numberOfDays = [NSCalendar numberOfDaysInYear:2017 month:10];
+    NSInteger numberOfDays = [NSCalendar jf_numberOfDaysInYear:2017 month:10];
     XCTAssertEqual(numberOfDays, 31);
 
-    NSInteger numberOfDays2 =[NSCalendar numberOfDaysInYear:2016];
+    NSInteger numberOfDays2 =[NSCalendar jf_numberOfDaysInYear:2016];
     XCTAssertEqual(numberOfDays2, 366);
 }
 

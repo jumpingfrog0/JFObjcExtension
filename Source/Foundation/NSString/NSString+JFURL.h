@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSString+JFURL.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,30 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+@interface NSString (JFURL)
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
-}
+/**
+ * String by escaping for url argument.
+ * @return Encoding url string.
+ */
+- (NSString *)jf_urlEncode;
+
+/**
+ * String by unescaping from url argument.
+ * @return Decoding url string.
+ */
+- (NSString *)jf_urlDecode;
+
+/**
+ *  在当前字符串后添加 URL query string，如果当前字符串本身没有 query string，则补上 ‘？’ 连接符，如果当前已经有 query string 则后补上 ‘&’ 连接符
+ *
+ *  @param queryString url query string，key=value&key2=value2
+ *
+ *  @return 拼接后的字符串
+ */
+- (NSString *)jf_URLStringByAppendingQueryString:(NSString *)queryString;
+
+- (NSURL *)jf_URLByAppendingQueryString:(NSString *)queryString;
 @end

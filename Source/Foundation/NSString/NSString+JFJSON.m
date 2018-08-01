@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSString+JFJSON.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,43 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import "NSString+JFJSON.h"
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
+@implementation NSString (JFJSON)
+
+- (id)jf_JSONObject
+{
+    if (!self) {
+        return nil;
+    }
+    
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    
+    if (error) {
+        NSException *e = [NSException exceptionWithName:@"MZD JSONParser Error" reason:error.localizedDescription userInfo:nil];
+        [e raise];
+    }
+    
+    return jsonObject;
 }
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
++ (NSString *)jf_stringWithJSONObject:(id)object
+{
+    if (!self) {
+        return nil;
+    }
+    
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:&error];
+    
+    if (error) {
+        NSException *e = [NSException exceptionWithName:@"MZD JSONParser Error" reason:error.localizedDescription userInfo:nil];
+        [e raise];
+    }
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
+
 @end

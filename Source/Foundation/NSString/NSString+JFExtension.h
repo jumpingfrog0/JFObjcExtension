@@ -31,23 +31,21 @@
 
 @interface NSString (JFExtension)
 
-- (CGFloat)suitableWidthWithFont:(UIFont *)font height:(CGFloat)height;
-- (CGFloat)suitableHeightWithFont:(UIFont *)font width:(CGFloat)width;
-- (CGFloat)suitableHeightWithFont:(UIFont *)font size:(CGSize)size;
++ (NSString *)jf_parseString:(NSString*)string separatorIndexs:(NSArray *)indexs separator:(NSString *)separator;
 
-/// 使用32位MD5加密字符串
-- (NSString *)MD5;
+- (CGFloat)jf_suitableWidthWithFont:(UIFont *)font height:(CGFloat)height;
 
-/// 使用SHA1加密字符串
-- (NSString *)SHA1;
+- (CGFloat)jf_suitableHeightWithFont:(UIFont *)font width:(CGFloat)width;
+
+- (CGFloat)jf_suitableHeightWithFont:(UIFont *)font size:(CGSize)size;
+
++ (NSString *)jf_zodiacSignWithMonth:(NSInteger)month day:(NSInteger)day;
++ (NSString *)jf_zodiacSignWithTs:(NSTimeInterval)ts;
 
 /**
  * 根据一个正则表达式在字符串中查找符合条件的子串
  *
  * @param regular 正则表达式
  */
-- (NSMutableArray *)subStringByRegular:(NSString *)regular;
-
-/// 判断是否是合法的Email地址
-- (BOOL)isValidEmail;
+- (NSMutableArray *)jf_subStringByRegular:(NSString *)regular;
 @end

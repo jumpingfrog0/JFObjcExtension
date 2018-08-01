@@ -31,66 +31,99 @@
 
 @implementation NSString (JFExtension)
 
-- (CGFloat)suitableWidthWithFont:(UIFont *)font height:(CGFloat)height
++ (NSString *)jf_parseString:(NSString*)string separatorIndexs:(NSArray *)indexs separator:(NSString *)separator {
+    if (!string) return nil;
+    NSMutableString *mStr = [NSMutableString stringWithString:[string stringByReplacingOccurrencesOfString:separator withString:@""]];
+    [indexs enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSInteger index = [obj integerValue];
+        if (mStr.length > index) [mStr insertString:separator atIndex:index];
+    }];
+    return  mStr;
+}
+
+- (CGFloat)jf_suitableWidthWithFont:(UIFont *)font height:(CGFloat)height
 {
     CGSize constraintSize = CGSizeMake(MAXFLOAT, height);
+    CGSize realSize;
+    if (!font) {
+        font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    }
     NSDictionary *attribute = @{NSFontAttributeName: font};
-    CGSize realSize = [self boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
-
+    realSize                = [self boundingRectWithSize:constraintSize
+                                                 options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                              attributes:attribute
+                                                 context:nil]
+    .size;
     return ceilf(realSize.width);
 }
 
-- (CGFloat)suitableHeightWithFont:(UIFont *)font width:(CGFloat)width
+- (CGFloat)jf_suitableHeightWithFont:(UIFont *)font width:(CGFloat)width
 {
     CGSize constraintSize = CGSizeMake(width, MAXFLOAT);
-    NSDictionary *attribute = @{NSFontAttributeName: font};
-    CGSize realSize = [self boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
-    return ceilf(realSize.height);
-}
-
-- (CGFloat)suitableHeightWithFont:(UIFont *)font size:(CGSize)size
-{
-    NSDictionary *attribute = @{NSFontAttributeName: font};
-    CGSize realSize = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
-    return ceilf(realSize.height);
-}
-
-- (NSString *)MD5
-{
-    const char *cStr = [self UTF8String];
-    unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    
-    CC_MD5(cStr, (unsigned)strlen(cStr), digest);
-    
-    NSMutableString *result = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    
-    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
-        [result appendFormat:@"%02x", digest[i]];
+    CGSize realSize;
+    if (!font) {
+        font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     }
+    NSDictionary *attribute = @{NSFontAttributeName: font};
+    realSize                = [self boundingRectWithSize:constraintSize
+                                                 options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                              attributes:attribute
+                                                 context:nil]
+    .size;
+    return ceilf(realSize.height);
+}
+
+- (CGFloat)jf_suitableHeightWithFont:(UIFont *)font size:(CGSize)size
+{
+    CGSize realSize;
+    if (!font) {
+        font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    }
+    NSDictionary *attribute = @{NSFontAttributeName: font};
+    realSize                = [self boundingRectWithSize:size
+                                                 options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                              attributes:attribute
+                                                 context:nil]
+    .size;
+    return ceilf(realSize.height);
+}
+
+#pragma mark - 星座
++ (NSString *)jf_zodiacSignWithMonth:(NSInteger)m day:(NSInteger)d
+{
+    NSString *zodiacString = @"魔羯水瓶双鱼白羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯";
+    NSString *zodiacFormat = @"102123444543";
+    
+    if (m<1||m>12||d<1||d>31){
+        return @"";
+    }
+    
+    if(m==2 && d>29) {
+        return @"";
+    } else if (m==4 || m==6 || m==9 || m==11) {
+        if (d>30) {
+            return @"";
+        }
+    }
+    
+    NSString *result = [NSString stringWithFormat:@"%@座",[zodiacString substringWithRange:NSMakeRange(m*2-(d < [[zodiacFormat substringWithRange:NSMakeRange((m-1), 1)] intValue] - (-19))*2,2)]];
     
     return result;
 }
 
-- (NSString *)SHA1
++ (NSString *)jf_zodiacSignWithTs:(NSTimeInterval)ts
 {
-    const char *cStr = [self UTF8String];
-    NSData *data = [NSData dataWithBytes:cStr length:self.length];
-    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
-    
-    CC_SHA1(data.bytes, (unsigned)data.length, digest);
-    
-    NSMutableString *result = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
-    
-    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {
-        [result appendFormat:@"%02x", digest[i]];
-    }
-    
-    return result;
+    NSDate *today = [NSDate dateWithTimeIntervalSince1970:ts];
+    NSCalendar *gregorian = [NSCalendar currentCalendar];
+    NSDateComponents *weekdayComponents = [gregorian components:(NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:today];
+    NSInteger month = [weekdayComponents month];
+    NSInteger day = [weekdayComponents day];
+    return [NSString jf_zodiacSignWithMonth:month day:day];
 }
 
 #pragma mark - Regular
 
-- (NSArray *)subStringByRegular:(NSString *)regular
+- (NSArray *)jf_subStringByRegular:(NSString *)regular
 {
     NSRange range = [self rangeOfString:regular options:NSRegularExpressionSearch];
     if (range.length == 0 || range.location == NSNotFound) {
@@ -106,12 +139,5 @@
         range = [self rangeOfString:regular options:NSRegularExpressionSearch range:subRange];
     }
     return array;
-}
-
-- (BOOL)isValidEmail
-{
-    NSString * regex = @"^[A-Z0-9a-z\\._\\%\\+\\-]+@[A-Za-z0-9\\.]+\\.[A-Za-z]{2,4}$";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    return [pred evaluateWithObject:self];
 }
 @end

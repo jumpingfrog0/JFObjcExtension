@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSDictionary+JFExtension.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,23 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import "NSDictionary+JFExtension.h"
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
-
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
+@implementation NSDictionary (JFExtension)
+- (NSDictionary *)jf_filterEmptyData
+{
+    NSMutableDictionary *result = [self mutableCopy];
+    [result enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
+        if ([obj isKindOfClass:NSDictionary.class]) {
+            result[key] = [obj jf_filterEmptyData];
+        } else if ([obj isKindOfClass:NSString.class]) {
+            if ([obj isEqualToString:@"<null>"]) {
+                result[key] = nil;
+            }
+        } else if ([obj isKindOfClass:NSNull.class]) {
+            result[key] = nil;
+        }
+    }];
+    return result;
 }
 @end

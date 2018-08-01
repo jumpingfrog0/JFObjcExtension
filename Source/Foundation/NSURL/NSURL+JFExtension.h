@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSURL+JFExtension.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,24 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+@interface NSURL (JFExtension)
+/**
+ *  将 URL 的 query string，按照 key-value 形式返回
+ *
+ *  @return 返回 query string 中参数的字典，忽略不以 key=value 存在的参数
+ */
+- (NSDictionary *)jf_parameters;
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
-}
+/**
+ *  在当前 URL 后添加 URL query string，如果当前字符串本身没有 query string，则补上 ‘？’ 连接符，如果当前已经有 query string 则后补上 ‘&’ 连接符
+ *
+ *  @param queryString url query string，key=value&key2=value2
+ *
+ *  @return 拼接后的 NSURL 对象，如果拼接后的字符串不符合 URL 格式，则返回 nil
+ */
+- (NSURL *)jf_URLByAppendingQueryString:(NSString *)queryString;
+
+- (NSURL *)jf_URLByAddQueriesFromDictionary:(NSDictionary *)dictionary;
 @end

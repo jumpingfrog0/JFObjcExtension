@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSDictionary+JFURL.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,20 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import "NSDictionary+JFURL.h"
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
-
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
+@implementation NSDictionary (JFURL)
+- (NSString *)jf_joinURLQueries
+{
+    if (self.allKeys.count > 0) {
+        NSEnumerator *keyEnumerator = [self keyEnumerator];
+        id key                      = [keyEnumerator nextObject];
+        NSMutableString *query      = [NSMutableString stringWithFormat:@"%@=%@", key, self[key]];
+        while ((key = [keyEnumerator nextObject]) != nil) {
+            [query appendFormat:@"&%@=%@", key, self[key]];
+        }
+        return query;
+    }
+    return nil;
 }
 @end

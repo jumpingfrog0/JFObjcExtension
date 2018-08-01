@@ -1,5 +1,5 @@
 //
-//  NSCalendar+JFExtension.m
+//  NSString+JFJSON.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +26,24 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+@interface NSString (JFJSON)
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
-}
+/**
+ *  通过 JSON object 初始化字符串
+ *
+ *  @param object JSON 对象，NSDictionary 或者 NSArray，子项只支持简单对象
+ *
+ *  @return 序列化后的 json string，转换失败返回 nil
+ */
++ (NSString *)jf_stringWithJSONObject:(id)object;
+
+/**
+ *  将当前 字符串转换成 JSON object
+ *
+ *  @return 如果当前为 json 字符串，则返回序列化后的 json object，否则返回 nil
+ */
+- (id)jf_JSONObject;
+
 @end

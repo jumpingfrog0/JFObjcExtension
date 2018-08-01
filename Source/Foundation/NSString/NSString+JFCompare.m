@@ -1,5 +1,4 @@
-//
-//  NSCalendar+JFExtension.m
+// NSString+JFCompare.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +25,16 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import "NSString+JFCompare.h"
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
+@implementation NSString (JFCompare)
+- (BOOL)jf_isLargerThan:(NSString *)str {
+    NSComparisonResult result = [self compare:str];
+    return (result == NSOrderedDescending);
 }
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
+- (BOOL)jf_isLargerOrEqualThan:(NSString *)str {
+    NSComparisonResult result = [self compare:str];
+    return (result != NSOrderedAscending);
 }
 @end

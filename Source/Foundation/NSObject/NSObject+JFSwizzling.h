@@ -1,5 +1,4 @@
-//
-//  NSCalendar+JFExtension.m
+// NSObject+JFSwizzling.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 01/08/2018.
@@ -26,17 +25,14 @@
 //  THE SOFTWARE.
 //
 
-#import "NSCalendar+JFExtension.h"
-#import "NSDate+JFUtilities.h"
+#import <Foundation/Foundation.h>
 
-@implementation NSCalendar (JFExtension)
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year {
-    NSDate *date = [NSDate jf_dateWithYear:year month:1 day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date].length;
-}
+@interface NSObject (JFSwizzling)
+- (void)jf_hookSelector:(SEL)originalSelector
+  withDefaultImplementSelector:(SEL)defaultSelector
+              swizzledSelector:(SEL)swizzledSelector
+                      forClass:(Class)aClass;
 
-+ (NSInteger)jf_numberOfDaysInYear:(NSInteger)year month:(NSInteger)month {
-    NSDate *date = [NSDate jf_dateWithYear:year month:month day:1];
-    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date].length;
-}
++ (void)jf_changeSelector:(SEL)sel withSelector:(SEL)swizzledSel;
+- (id)jf_performSelector:(SEL)sel withObjects:(NSArray *)objects;
 @end

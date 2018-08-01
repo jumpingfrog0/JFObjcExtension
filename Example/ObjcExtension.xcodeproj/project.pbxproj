@@ -18,14 +18,35 @@
 		084B95D12111923D000BC5A9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95A62111923D000BC5A9 /* UIView+Frame.m */; };
 		084B95D22111923D000BC5A9 /* UIDevice+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95AB2111923D000BC5A9 /* UIDevice+Extend.m */; };
 		084B95D32111923D000BC5A9 /* UIViewController+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95AE2111923D000BC5A9 /* UIViewController+Extend.m */; };
-		084B95D42111923D000BC5A9 /* NSDictionary+JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95B22111923D000BC5A9 /* NSDictionary+JFLog.m */; };
-		084B95D52111923D000BC5A9 /* NSCalendar+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95B62111923D000BC5A9 /* NSCalendar+JFExtension.m */; };
-		084B95D62111923D000BC5A9 /* NSString+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95B92111923D000BC5A9 /* NSString+JFExtension.m */; };
-		084B95D72111923D000BC5A9 /* NSArray+JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95BC2111923D000BC5A9 /* NSArray+JFLog.m */; };
-		084B95D82111923D000BC5A9 /* NSNumber+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95C12111923D000BC5A9 /* NSNumber+JFExtension.m */; };
-		084B95D92111923D000BC5A9 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95C32111923D000BC5A9 /* NSDate+Utilities.m */; };
-		084B95DA2111923D000BC5A9 /* NSDate+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95C52111923D000BC5A9 /* NSDate+JFExtension.m */; };
 		084B95DB2111923D000BC5A9 /* UITabBar+JFSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95C82111923D000BC5A9 /* UITabBar+JFSwizzling.m */; };
+		084B96522111A7D4000BC5A9 /* NSDictionary+JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96082111A7D4000BC5A9 /* NSDictionary+JFLog.m */; };
+		084B96532111A7D4000BC5A9 /* NSCalendar+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B960A2111A7D4000BC5A9 /* NSCalendar+JFExtension.m */; };
+		084B96542111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B960D2111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.m */; };
+		084B96552111A7D4000BC5A9 /* NSLocale+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96122111A7D4000BC5A9 /* NSLocale+JFExtension.m */; };
+		084B96562111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96172111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.m */; };
+		084B96572111A7D4000BC5A9 /* NSData+JFEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96192111A7D4000BC5A9 /* NSData+JFEncrypt.m */; };
+		084B96582111A7D4000BC5A9 /* NSData+JFBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B961B2111A7D4000BC5A9 /* NSData+JFBase64.m */; };
+		084B96592111A7D4000BC5A9 /* NSData+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B961C2111A7D4000BC5A9 /* NSData+JFExtension.m */; };
+		084B965A2111A7D4000BC5A9 /* NSURL+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96212111A7D4000BC5A9 /* NSURL+JFExtension.m */; };
+		084B965B2111A7D4000BC5A9 /* NSString+JFRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96262111A7D4000BC5A9 /* NSString+JFRender.m */; };
+		084B965C2111A7D4000BC5A9 /* NSString+JFEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96292111A7D4000BC5A9 /* NSString+JFEncode.m */; };
+		084B965D2111A7D4000BC5A9 /* NSString+JFJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B962A2111A7D4000BC5A9 /* NSString+JFJSON.m */; };
+		084B965E2111A7D4000BC5A9 /* NSString+JFURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B962F2111A7D4000BC5A9 /* NSString+JFURL.m */; };
+		084B965F2111A7D4000BC5A9 /* NSString+JFValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96312111A7D4000BC5A9 /* NSString+JFValidate.m */; };
+		084B96602111A7D4000BC5A9 /* NSString+JFCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96332111A7D4000BC5A9 /* NSString+JFCompare.m */; };
+		084B96612111A7D4000BC5A9 /* NSString+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96342111A7D4000BC5A9 /* NSString+JFExtension.m */; };
+		084B96622111A7D4000BC5A9 /* NSString+JFBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96362111A7D4000BC5A9 /* NSString+JFBase64.m */; };
+		084B96632111A7D4000BC5A9 /* NSString+JFEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96372111A7D4000BC5A9 /* NSString+JFEncrypt.m */; };
+		084B96642111A7D4000BC5A9 /* NSArray+JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96392111A7D4000BC5A9 /* NSArray+JFLog.m */; };
+		084B96652111A7D4000BC5A9 /* NSArray+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B963C2111A7D4000BC5A9 /* NSArray+JFExtension.m */; };
+		084B96662111A7D4000BC5A9 /* NSMutableArray+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96412111A7D4000BC5A9 /* NSMutableArray+JFExtension.m */; };
+		084B96672111A7D4000BC5A9 /* NSNumber+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96462111A7D4000BC5A9 /* NSNumber+JFExtension.m */; };
+		084B96682111A7D4000BC5A9 /* NSObject+JFSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B964B2111A7D4000BC5A9 /* NSObject+JFSwizzling.m */; };
+		084B96692111A7D4000BC5A9 /* NSObject+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B964C2111A7D4000BC5A9 /* NSObject+JFExtension.m */; };
+		084B966A2111A7D4000BC5A9 /* NSDate+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B964F2111A7D4000BC5A9 /* NSDate+JFExtension.m */; };
+		084B966B2111A7D4000BC5A9 /* NSDate+JFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B96502111A7D4000BC5A9 /* NSDate+JFUtilities.m */; };
+		084B96712111A81A000BC5A9 /* NSDictionary+JFURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B966C2111A81A000BC5A9 /* NSDictionary+JFURL.m */; };
+		084B96722111A81A000BC5A9 /* NSDictionary+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B966E2111A81A000BC5A9 /* NSDictionary+JFExtension.m */; };
 		08631D121F28FF30000D9BEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08631D111F28FF30000D9BEE /* main.m */; };
 		08631D151F28FF30000D9BEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08631D141F28FF30000D9BEE /* AppDelegate.m */; };
 		08631D181F28FF30000D9BEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08631D171F28FF30000D9BEE /* ViewController.m */; };
@@ -80,23 +101,77 @@
 		084B95AC2111923D000BC5A9 /* UIDevice+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extend.h"; sourceTree = "<group>"; };
 		084B95AE2111923D000BC5A9 /* UIViewController+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extend.m"; sourceTree = "<group>"; };
 		084B95AF2111923D000BC5A9 /* UIViewController+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extend.h"; sourceTree = "<group>"; };
-		084B95B22111923D000BC5A9 /* NSDictionary+JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JFLog.m"; sourceTree = "<group>"; };
-		084B95B32111923D000BC5A9 /* NSDictionary+JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JFLog.h"; sourceTree = "<group>"; };
-		084B95B52111923D000BC5A9 /* NSCalendar+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+JFExtension.h"; sourceTree = "<group>"; };
-		084B95B62111923D000BC5A9 /* NSCalendar+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+JFExtension.m"; sourceTree = "<group>"; };
-		084B95B82111923D000BC5A9 /* NSString+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFExtension.h"; sourceTree = "<group>"; };
-		084B95B92111923D000BC5A9 /* NSString+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFExtension.m"; sourceTree = "<group>"; };
-		084B95BB2111923D000BC5A9 /* NSArray+JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JFLog.h"; sourceTree = "<group>"; };
-		084B95BC2111923D000BC5A9 /* NSArray+JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JFLog.m"; sourceTree = "<group>"; };
-		084B95BE2111923D000BC5A9 /* LogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogMacros.h; sourceTree = "<group>"; };
-		084B95C02111923D000BC5A9 /* NSNumber+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JFExtension.h"; sourceTree = "<group>"; };
-		084B95C12111923D000BC5A9 /* NSNumber+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JFExtension.m"; sourceTree = "<group>"; };
-		084B95C32111923D000BC5A9 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
-		084B95C42111923D000BC5A9 /* NSDate+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JFExtension.h"; sourceTree = "<group>"; };
-		084B95C52111923D000BC5A9 /* NSDate+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JFExtension.m"; sourceTree = "<group>"; };
-		084B95C62111923D000BC5A9 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		084B95C82111923D000BC5A9 /* UITabBar+JFSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+JFSwizzling.m"; sourceTree = "<group>"; };
 		084B95C92111923D000BC5A9 /* UITabBar+JFSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+JFSwizzling.h"; sourceTree = "<group>"; };
+		084B96072111A7D4000BC5A9 /* NSDictionary+JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JFLog.h"; sourceTree = "<group>"; };
+		084B96082111A7D4000BC5A9 /* NSDictionary+JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JFLog.m"; sourceTree = "<group>"; };
+		084B960A2111A7D4000BC5A9 /* NSCalendar+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+JFExtension.m"; sourceTree = "<group>"; };
+		084B960B2111A7D4000BC5A9 /* NSCalendar+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+JFExtension.h"; sourceTree = "<group>"; };
+		084B960D2111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+JFFormat.m"; sourceTree = "<group>"; };
+		084B960E2111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+JFFormat.h"; sourceTree = "<group>"; };
+		084B960F2111A7D4000BC5A9 /* NSMutableAttributedString+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+JF.h"; sourceTree = "<group>"; };
+		084B96112111A7D4000BC5A9 /* NSLocale+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+JF.h"; sourceTree = "<group>"; };
+		084B96122111A7D4000BC5A9 /* NSLocale+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+JFExtension.m"; sourceTree = "<group>"; };
+		084B96132111A7D4000BC5A9 /* NSLocale+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+JFExtension.h"; sourceTree = "<group>"; };
+		084B96152111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+JFExtension.h"; sourceTree = "<group>"; };
+		084B96162111A7D4000BC5A9 /* NSMutableDictionary+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+JF.h"; sourceTree = "<group>"; };
+		084B96172111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+JFExtension.m"; sourceTree = "<group>"; };
+		084B96192111A7D4000BC5A9 /* NSData+JFEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JFEncrypt.m"; sourceTree = "<group>"; };
+		084B961A2111A7D4000BC5A9 /* NSData+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JFExtension.h"; sourceTree = "<group>"; };
+		084B961B2111A7D4000BC5A9 /* NSData+JFBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JFBase64.m"; sourceTree = "<group>"; };
+		084B961C2111A7D4000BC5A9 /* NSData+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JFExtension.m"; sourceTree = "<group>"; };
+		084B961D2111A7D4000BC5A9 /* NSData+JFEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JFEncrypt.h"; sourceTree = "<group>"; };
+		084B961E2111A7D4000BC5A9 /* NSData+JFBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JFBase64.h"; sourceTree = "<group>"; };
+		084B961F2111A7D4000BC5A9 /* NSData+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JF.h"; sourceTree = "<group>"; };
+		084B96212111A7D4000BC5A9 /* NSURL+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+JFExtension.m"; sourceTree = "<group>"; };
+		084B96222111A7D4000BC5A9 /* NSURL+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+JF.h"; sourceTree = "<group>"; };
+		084B96232111A7D4000BC5A9 /* NSURL+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+JFExtension.h"; sourceTree = "<group>"; };
+		084B96252111A7D4000BC5A9 /* NSString+JFURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFURL.h"; sourceTree = "<group>"; };
+		084B96262111A7D4000BC5A9 /* NSString+JFRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFRender.m"; sourceTree = "<group>"; };
+		084B96272111A7D4000BC5A9 /* NSString+JFCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFCompare.h"; sourceTree = "<group>"; };
+		084B96282111A7D4000BC5A9 /* NSString+JFValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFValidate.h"; sourceTree = "<group>"; };
+		084B96292111A7D4000BC5A9 /* NSString+JFEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFEncode.m"; sourceTree = "<group>"; };
+		084B962A2111A7D4000BC5A9 /* NSString+JFJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFJSON.m"; sourceTree = "<group>"; };
+		084B962B2111A7D4000BC5A9 /* NSString+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFExtension.h"; sourceTree = "<group>"; };
+		084B962C2111A7D4000BC5A9 /* NSString+MZD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MZD.h"; sourceTree = "<group>"; };
+		084B962D2111A7D4000BC5A9 /* NSString+JFEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFEncrypt.h"; sourceTree = "<group>"; };
+		084B962E2111A7D4000BC5A9 /* NSString+JFBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFBase64.h"; sourceTree = "<group>"; };
+		084B962F2111A7D4000BC5A9 /* NSString+JFURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFURL.m"; sourceTree = "<group>"; };
+		084B96302111A7D4000BC5A9 /* NSString+JFEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFEncode.h"; sourceTree = "<group>"; };
+		084B96312111A7D4000BC5A9 /* NSString+JFValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFValidate.m"; sourceTree = "<group>"; };
+		084B96322111A7D4000BC5A9 /* NSString+JFRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFRender.h"; sourceTree = "<group>"; };
+		084B96332111A7D4000BC5A9 /* NSString+JFCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFCompare.m"; sourceTree = "<group>"; };
+		084B96342111A7D4000BC5A9 /* NSString+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFExtension.m"; sourceTree = "<group>"; };
+		084B96352111A7D4000BC5A9 /* NSString+JFJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JFJSON.h"; sourceTree = "<group>"; };
+		084B96362111A7D4000BC5A9 /* NSString+JFBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFBase64.m"; sourceTree = "<group>"; };
+		084B96372111A7D4000BC5A9 /* NSString+JFEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JFEncrypt.m"; sourceTree = "<group>"; };
+		084B96392111A7D4000BC5A9 /* NSArray+JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JFLog.m"; sourceTree = "<group>"; };
+		084B963A2111A7D4000BC5A9 /* NSArray+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JF.h"; sourceTree = "<group>"; };
+		084B963B2111A7D4000BC5A9 /* NSArray+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JFExtension.h"; sourceTree = "<group>"; };
+		084B963C2111A7D4000BC5A9 /* NSArray+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JFExtension.m"; sourceTree = "<group>"; };
+		084B963D2111A7D4000BC5A9 /* NSArray+JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JFLog.h"; sourceTree = "<group>"; };
+		084B963F2111A7D4000BC5A9 /* NSMutableArray+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JF.h"; sourceTree = "<group>"; };
+		084B96402111A7D4000BC5A9 /* NSMutableArray+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JFExtension.h"; sourceTree = "<group>"; };
+		084B96412111A7D4000BC5A9 /* NSMutableArray+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JFExtension.m"; sourceTree = "<group>"; };
+		084B96432111A7D4000BC5A9 /* LogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogMacros.h; sourceTree = "<group>"; };
+		084B96452111A7D4000BC5A9 /* NSNumber+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JFExtension.h"; sourceTree = "<group>"; };
+		084B96462111A7D4000BC5A9 /* NSNumber+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JFExtension.m"; sourceTree = "<group>"; };
+		084B96482111A7D4000BC5A9 /* NSObject+JFSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JFSwizzling.h"; sourceTree = "<group>"; };
+		084B96492111A7D4000BC5A9 /* NSObject+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JF.h"; sourceTree = "<group>"; };
+		084B964A2111A7D4000BC5A9 /* NSObject+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JFExtension.h"; sourceTree = "<group>"; };
+		084B964B2111A7D4000BC5A9 /* NSObject+JFSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JFSwizzling.m"; sourceTree = "<group>"; };
+		084B964C2111A7D4000BC5A9 /* NSObject+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JFExtension.m"; sourceTree = "<group>"; };
+		084B964E2111A7D4000BC5A9 /* NSDate+JFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JFUtilities.h"; sourceTree = "<group>"; };
+		084B964F2111A7D4000BC5A9 /* NSDate+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JFExtension.m"; sourceTree = "<group>"; };
+		084B96502111A7D4000BC5A9 /* NSDate+JFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JFUtilities.m"; sourceTree = "<group>"; };
+		084B96512111A7D4000BC5A9 /* NSDate+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JFExtension.h"; sourceTree = "<group>"; };
+		084B966C2111A81A000BC5A9 /* NSDictionary+JFURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JFURL.m"; sourceTree = "<group>"; };
+		084B966D2111A81A000BC5A9 /* NSDictionary+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JF.h"; sourceTree = "<group>"; };
+		084B966E2111A81A000BC5A9 /* NSDictionary+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JFExtension.m"; sourceTree = "<group>"; };
+		084B966F2111A81A000BC5A9 /* NSDictionary+JFURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JFURL.h"; sourceTree = "<group>"; };
+		084B96702111A81A000BC5A9 /* NSDictionary+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JFExtension.h"; sourceTree = "<group>"; };
+		084B96732111A8EF000BC5A9 /* NSDate+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JF.h"; sourceTree = "<group>"; };
+		084B96742111A951000BC5A9 /* NSNumber+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JF.h"; sourceTree = "<group>"; };
 		08631D0D1F28FF30000D9BEE /* ObjcExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08631D111F28FF30000D9BEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08631D131F28FF30000D9BEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,9 +229,9 @@
 		084B95922111923D000BC5A9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				084B96052111A7D4000BC5A9 /* Foundation */,
 				084B95932111923D000BC5A9 /* CoreGraphics */,
 				084B95962111923D000BC5A9 /* UIKit */,
-				084B95B02111923D000BC5A9 /* Foundation */,
 				084B95C72111923D000BC5A9 /* Swizzling */,
 			);
 			name = Source;
@@ -253,84 +328,6 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		084B95B02111923D000BC5A9 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				084B95B12111923D000BC5A9 /* NSDictionary */,
-				084B95B42111923D000BC5A9 /* NSCalendar */,
-				084B95B72111923D000BC5A9 /* NSString */,
-				084B95BA2111923D000BC5A9 /* NSArray */,
-				084B95BD2111923D000BC5A9 /* Log */,
-				084B95BF2111923D000BC5A9 /* NSNumber */,
-				084B95C22111923D000BC5A9 /* NSDate */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		084B95B12111923D000BC5A9 /* NSDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				084B95B22111923D000BC5A9 /* NSDictionary+JFLog.m */,
-				084B95B32111923D000BC5A9 /* NSDictionary+JFLog.h */,
-			);
-			path = NSDictionary;
-			sourceTree = "<group>";
-		};
-		084B95B42111923D000BC5A9 /* NSCalendar */ = {
-			isa = PBXGroup;
-			children = (
-				084B95B52111923D000BC5A9 /* NSCalendar+JFExtension.h */,
-				084B95B62111923D000BC5A9 /* NSCalendar+JFExtension.m */,
-			);
-			path = NSCalendar;
-			sourceTree = "<group>";
-		};
-		084B95B72111923D000BC5A9 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				084B95B82111923D000BC5A9 /* NSString+JFExtension.h */,
-				084B95B92111923D000BC5A9 /* NSString+JFExtension.m */,
-			);
-			path = NSString;
-			sourceTree = "<group>";
-		};
-		084B95BA2111923D000BC5A9 /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-				084B95BB2111923D000BC5A9 /* NSArray+JFLog.h */,
-				084B95BC2111923D000BC5A9 /* NSArray+JFLog.m */,
-			);
-			path = NSArray;
-			sourceTree = "<group>";
-		};
-		084B95BD2111923D000BC5A9 /* Log */ = {
-			isa = PBXGroup;
-			children = (
-				084B95BE2111923D000BC5A9 /* LogMacros.h */,
-			);
-			path = Log;
-			sourceTree = "<group>";
-		};
-		084B95BF2111923D000BC5A9 /* NSNumber */ = {
-			isa = PBXGroup;
-			children = (
-				084B95C02111923D000BC5A9 /* NSNumber+JFExtension.h */,
-				084B95C12111923D000BC5A9 /* NSNumber+JFExtension.m */,
-			);
-			path = NSNumber;
-			sourceTree = "<group>";
-		};
-		084B95C22111923D000BC5A9 /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				084B95C32111923D000BC5A9 /* NSDate+Utilities.m */,
-				084B95C42111923D000BC5A9 /* NSDate+JFExtension.h */,
-				084B95C52111923D000BC5A9 /* NSDate+JFExtension.m */,
-				084B95C62111923D000BC5A9 /* NSDate+Utilities.h */,
-			);
-			path = NSDate;
-			sourceTree = "<group>";
-		};
 		084B95C72111923D000BC5A9 /* Swizzling */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +335,194 @@
 				084B95C92111923D000BC5A9 /* UITabBar+JFSwizzling.h */,
 			);
 			path = Swizzling;
+			sourceTree = "<group>";
+		};
+		084B96052111A7D4000BC5A9 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				084B96062111A7D4000BC5A9 /* NSDictionary */,
+				084B96092111A7D4000BC5A9 /* NSCalendar */,
+				084B960C2111A7D4000BC5A9 /* NSMutableAttributedString */,
+				084B96102111A7D4000BC5A9 /* NSLocale */,
+				084B96142111A7D4000BC5A9 /* NSMutableDictionary */,
+				084B96182111A7D4000BC5A9 /* NSData */,
+				084B96202111A7D4000BC5A9 /* NSURL */,
+				084B96242111A7D4000BC5A9 /* NSString */,
+				084B96382111A7D4000BC5A9 /* NSArray */,
+				084B963E2111A7D4000BC5A9 /* NSMutableArray */,
+				084B96422111A7D4000BC5A9 /* Log */,
+				084B96442111A7D4000BC5A9 /* NSNumber */,
+				084B96472111A7D4000BC5A9 /* NSObject */,
+				084B964D2111A7D4000BC5A9 /* NSDate */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		084B96062111A7D4000BC5A9 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				084B966D2111A81A000BC5A9 /* NSDictionary+JF.h */,
+				084B96702111A81A000BC5A9 /* NSDictionary+JFExtension.h */,
+				084B966E2111A81A000BC5A9 /* NSDictionary+JFExtension.m */,
+				084B966F2111A81A000BC5A9 /* NSDictionary+JFURL.h */,
+				084B966C2111A81A000BC5A9 /* NSDictionary+JFURL.m */,
+				084B96072111A7D4000BC5A9 /* NSDictionary+JFLog.h */,
+				084B96082111A7D4000BC5A9 /* NSDictionary+JFLog.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		084B96092111A7D4000BC5A9 /* NSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				084B960A2111A7D4000BC5A9 /* NSCalendar+JFExtension.m */,
+				084B960B2111A7D4000BC5A9 /* NSCalendar+JFExtension.h */,
+			);
+			path = NSCalendar;
+			sourceTree = "<group>";
+		};
+		084B960C2111A7D4000BC5A9 /* NSMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				084B960D2111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.m */,
+				084B960E2111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.h */,
+				084B960F2111A7D4000BC5A9 /* NSMutableAttributedString+JF.h */,
+			);
+			path = NSMutableAttributedString;
+			sourceTree = "<group>";
+		};
+		084B96102111A7D4000BC5A9 /* NSLocale */ = {
+			isa = PBXGroup;
+			children = (
+				084B96112111A7D4000BC5A9 /* NSLocale+JF.h */,
+				084B96122111A7D4000BC5A9 /* NSLocale+JFExtension.m */,
+				084B96132111A7D4000BC5A9 /* NSLocale+JFExtension.h */,
+			);
+			path = NSLocale;
+			sourceTree = "<group>";
+		};
+		084B96142111A7D4000BC5A9 /* NSMutableDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				084B96152111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.h */,
+				084B96162111A7D4000BC5A9 /* NSMutableDictionary+JF.h */,
+				084B96172111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.m */,
+			);
+			path = NSMutableDictionary;
+			sourceTree = "<group>";
+		};
+		084B96182111A7D4000BC5A9 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				084B96192111A7D4000BC5A9 /* NSData+JFEncrypt.m */,
+				084B961A2111A7D4000BC5A9 /* NSData+JFExtension.h */,
+				084B961B2111A7D4000BC5A9 /* NSData+JFBase64.m */,
+				084B961C2111A7D4000BC5A9 /* NSData+JFExtension.m */,
+				084B961D2111A7D4000BC5A9 /* NSData+JFEncrypt.h */,
+				084B961E2111A7D4000BC5A9 /* NSData+JFBase64.h */,
+				084B961F2111A7D4000BC5A9 /* NSData+JF.h */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		084B96202111A7D4000BC5A9 /* NSURL */ = {
+			isa = PBXGroup;
+			children = (
+				084B96212111A7D4000BC5A9 /* NSURL+JFExtension.m */,
+				084B96222111A7D4000BC5A9 /* NSURL+JF.h */,
+				084B96232111A7D4000BC5A9 /* NSURL+JFExtension.h */,
+			);
+			path = NSURL;
+			sourceTree = "<group>";
+		};
+		084B96242111A7D4000BC5A9 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				084B96252111A7D4000BC5A9 /* NSString+JFURL.h */,
+				084B96262111A7D4000BC5A9 /* NSString+JFRender.m */,
+				084B96272111A7D4000BC5A9 /* NSString+JFCompare.h */,
+				084B96282111A7D4000BC5A9 /* NSString+JFValidate.h */,
+				084B96292111A7D4000BC5A9 /* NSString+JFEncode.m */,
+				084B962A2111A7D4000BC5A9 /* NSString+JFJSON.m */,
+				084B962B2111A7D4000BC5A9 /* NSString+JFExtension.h */,
+				084B962C2111A7D4000BC5A9 /* NSString+MZD.h */,
+				084B962D2111A7D4000BC5A9 /* NSString+JFEncrypt.h */,
+				084B962E2111A7D4000BC5A9 /* NSString+JFBase64.h */,
+				084B962F2111A7D4000BC5A9 /* NSString+JFURL.m */,
+				084B96302111A7D4000BC5A9 /* NSString+JFEncode.h */,
+				084B96312111A7D4000BC5A9 /* NSString+JFValidate.m */,
+				084B96322111A7D4000BC5A9 /* NSString+JFRender.h */,
+				084B96332111A7D4000BC5A9 /* NSString+JFCompare.m */,
+				084B96342111A7D4000BC5A9 /* NSString+JFExtension.m */,
+				084B96352111A7D4000BC5A9 /* NSString+JFJSON.h */,
+				084B96362111A7D4000BC5A9 /* NSString+JFBase64.m */,
+				084B96372111A7D4000BC5A9 /* NSString+JFEncrypt.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		084B96382111A7D4000BC5A9 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				084B96392111A7D4000BC5A9 /* NSArray+JFLog.m */,
+				084B963A2111A7D4000BC5A9 /* NSArray+JF.h */,
+				084B963B2111A7D4000BC5A9 /* NSArray+JFExtension.h */,
+				084B963C2111A7D4000BC5A9 /* NSArray+JFExtension.m */,
+				084B963D2111A7D4000BC5A9 /* NSArray+JFLog.h */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		084B963E2111A7D4000BC5A9 /* NSMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				084B963F2111A7D4000BC5A9 /* NSMutableArray+JF.h */,
+				084B96402111A7D4000BC5A9 /* NSMutableArray+JFExtension.h */,
+				084B96412111A7D4000BC5A9 /* NSMutableArray+JFExtension.m */,
+			);
+			path = NSMutableArray;
+			sourceTree = "<group>";
+		};
+		084B96422111A7D4000BC5A9 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				084B96432111A7D4000BC5A9 /* LogMacros.h */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		084B96442111A7D4000BC5A9 /* NSNumber */ = {
+			isa = PBXGroup;
+			children = (
+				084B96742111A951000BC5A9 /* NSNumber+JF.h */,
+				084B96452111A7D4000BC5A9 /* NSNumber+JFExtension.h */,
+				084B96462111A7D4000BC5A9 /* NSNumber+JFExtension.m */,
+			);
+			path = NSNumber;
+			sourceTree = "<group>";
+		};
+		084B96472111A7D4000BC5A9 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				084B96482111A7D4000BC5A9 /* NSObject+JFSwizzling.h */,
+				084B96492111A7D4000BC5A9 /* NSObject+JF.h */,
+				084B964A2111A7D4000BC5A9 /* NSObject+JFExtension.h */,
+				084B964B2111A7D4000BC5A9 /* NSObject+JFSwizzling.m */,
+				084B964C2111A7D4000BC5A9 /* NSObject+JFExtension.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		084B964D2111A7D4000BC5A9 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				084B96732111A8EF000BC5A9 /* NSDate+JF.h */,
+				084B964E2111A7D4000BC5A9 /* NSDate+JFUtilities.h */,
+				084B964F2111A7D4000BC5A9 /* NSDate+JFExtension.m */,
+				084B96502111A7D4000BC5A9 /* NSDate+JFUtilities.m */,
+				084B96512111A7D4000BC5A9 /* NSDate+JFExtension.h */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 		08631D041F28FF30000D9BEE = {
@@ -551,32 +736,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				084B95DA2111923D000BC5A9 /* NSDate+JFExtension.m in Sources */,
-				084B95D52111923D000BC5A9 /* NSCalendar+JFExtension.m in Sources */,
+				084B96672111A7D4000BC5A9 /* NSNumber+JFExtension.m in Sources */,
+				084B965B2111A7D4000BC5A9 /* NSString+JFRender.m in Sources */,
 				08631D181F28FF30000D9BEE /* ViewController.m in Sources */,
 				084B95CD2111923D000BC5A9 /* UIButton+Extend.m in Sources */,
+				084B96532111A7D4000BC5A9 /* NSCalendar+JFExtension.m in Sources */,
+				084B96542111A7D4000BC5A9 /* NSMutableAttributedString+JFFormat.m in Sources */,
+				084B96602111A7D4000BC5A9 /* NSString+JFCompare.m in Sources */,
+				084B96622111A7D4000BC5A9 /* NSString+JFBase64.m in Sources */,
 				084B95D22111923D000BC5A9 /* UIDevice+Extend.m in Sources */,
 				086393931F9FA18C007C0D3F /* NSDictionaryTestController.m in Sources */,
+				084B96642111A7D4000BC5A9 /* NSArray+JFLog.m in Sources */,
+				084B965A2111A7D4000BC5A9 /* NSURL+JFExtension.m in Sources */,
+				084B96692111A7D4000BC5A9 /* NSObject+JFExtension.m in Sources */,
 				08631D151F28FF30000D9BEE /* AppDelegate.m in Sources */,
 				08631D121F28FF30000D9BEE /* main.m in Sources */,
+				084B965F2111A7D4000BC5A9 /* NSString+JFValidate.m in Sources */,
 				084B95D02111923D000BC5A9 /* UIView+Drawing.m in Sources */,
+				084B96582111A7D4000BC5A9 /* NSData+JFBase64.m in Sources */,
+				084B96722111A81A000BC5A9 /* NSDictionary+JFExtension.m in Sources */,
+				084B966A2111A7D4000BC5A9 /* NSDate+JFExtension.m in Sources */,
+				084B96682111A7D4000BC5A9 /* NSObject+JFSwizzling.m in Sources */,
 				084B95CA2111923D000BC5A9 /* MZDGeometry.m in Sources */,
-				084B95D42111923D000BC5A9 /* NSDictionary+JFLog.m in Sources */,
 				084B95DB2111923D000BC5A9 /* UITabBar+JFSwizzling.m in Sources */,
+				084B96712111A81A000BC5A9 /* NSDictionary+JFURL.m in Sources */,
+				084B96592111A7D4000BC5A9 /* NSData+JFExtension.m in Sources */,
+				084B965C2111A7D4000BC5A9 /* NSString+JFEncode.m in Sources */,
 				08AAF6121F7E46AA002A001A /* UIViewTestController.m in Sources */,
-				084B95D82111923D000BC5A9 /* NSNumber+JFExtension.m in Sources */,
-				084B95D62111923D000BC5A9 /* NSString+JFExtension.m in Sources */,
+				084B965E2111A7D4000BC5A9 /* NSString+JFURL.m in Sources */,
+				084B96652111A7D4000BC5A9 /* NSArray+JFExtension.m in Sources */,
 				084B95D12111923D000BC5A9 /* UIView+Frame.m in Sources */,
 				084B95CC2111923D000BC5A9 /* UILabel+Extend.m in Sources */,
 				08D326D61F3D6DA600521788 /* UIButtonTestController.m in Sources */,
 				084B95CB2111923D000BC5A9 /* UIImage+Extend.m in Sources */,
 				084B95CF2111923D000BC5A9 /* UIView+Extend.m in Sources */,
-				084B95D72111923D000BC5A9 /* NSArray+JFLog.m in Sources */,
-				084B95D92111923D000BC5A9 /* NSDate+Utilities.m in Sources */,
+				084B965D2111A7D4000BC5A9 /* NSString+JFJSON.m in Sources */,
+				084B96522111A7D4000BC5A9 /* NSDictionary+JFLog.m in Sources */,
 				084B95D32111923D000BC5A9 /* UIViewController+Extend.m in Sources */,
+				084B96632111A7D4000BC5A9 /* NSString+JFEncrypt.m in Sources */,
 				0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */,
+				084B96552111A7D4000BC5A9 /* NSLocale+JFExtension.m in Sources */,
+				084B96562111A7D4000BC5A9 /* NSMutableDictionary+JFExtension.m in Sources */,
 				7AA68CA3E132C07469B08D44 /* NSArrayTestController.m in Sources */,
+				084B96572111A7D4000BC5A9 /* NSData+JFEncrypt.m in Sources */,
+				084B96662111A7D4000BC5A9 /* NSMutableArray+JFExtension.m in Sources */,
+				084B966B2111A7D4000BC5A9 /* NSDate+JFUtilities.m in Sources */,
 				084B95CE2111923D000BC5A9 /* UIColor+Extend.m in Sources */,
+				084B96612111A7D4000BC5A9 /* NSString+JFExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
