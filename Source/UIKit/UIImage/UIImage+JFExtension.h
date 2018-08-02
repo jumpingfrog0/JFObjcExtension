@@ -1,5 +1,5 @@
 //
-//  UIImageTestController.m
+//  UIImage+Extend.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -26,23 +26,38 @@
 //  THE SOFTWARE.
 //
 
-#import "UIImageTestController.h"
-#import "UIImage+JFExtension.h"
+#import <UIKit/UIKit.h>
 
-@interface UIImageTestController ()
-@property (weak, nonatomic) IBOutlet UIImageView *bubbleView;
-@property (weak, nonatomic) IBOutlet UIImageView *captureView;
+FOUNDATION_EXPORT NSString *const kMZDSaveImageToPhotosAlbumSuccessNotification;
+FOUNDATION_EXPORT NSString *const kMZDSaveImageToPhotosAlbumFailureNotification;
 
+@interface UIImage (JFExtension)
+
++ (instancetype)jf_generateWithWatermark:(UIImage *)watermark ForImage:(UIImage *)image;
++ (UIImage *)jf_resizableImageNamed:(NSString *)name;
+
+/**
+ * 从 bundle 中加载 image
+ * @param imageName 图片名称
+ * @param bundleName 包名
+ * @return bundle 中存在 返回 UIImage，否则返回 nil
+ */
++ (UIImage *)jf_imageNamed:(NSString *)imageName inBundle:(NSString *)bundleName;
+
+#pragma mark - snapshot
+
+//获得屏幕图像
++ (UIImage *)jf_imageFromView:(UIView *)view;
+
+//获得某个范围内的屏幕图像
++ (UIImage *)jf_imageFromView:(UIView *)view inRect:(CGRect)rect;
+
+#pragma mark - save
+
+- (void)jf_saveToPhotosAlbum;
+
+#pragma mark - rotate
+
+- (UIImage *)jf_imageRotatedByRadians:(CGFloat)radians;
+- (UIImage *)jf_imageRotatedByDegrees:(CGFloat)degrees;
 @end
-
-@implementation UIImageTestController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.bubbleView.image = [UIImage jf_resizableImageNamed:@"bubble"];
-//    self.captureView.image = [UIImage captureWithView:self.view];
-}
-
-@end
-

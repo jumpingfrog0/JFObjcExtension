@@ -27,7 +27,7 @@
 //
 
 #import "UIButtonTestController.h"
-#import "UIButton+Extend.h"
+#import "UIButton+JFExtension.h"
 
 @interface UIButtonTestController ()
 @property (weak, nonatomic) IBOutlet UIButton *bananaButton;
@@ -40,9 +40,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.bananaButton alignVerticalWithSpacing:4.0 bottomPadding: 4.0];
-    [self.bananaButton2 alignVerticalWithSpacing:4.0];
-    [self.bananaButton3 alignHorizontalWithSpacing:20.0];
+    [self.bananaButton jf_alignVerticalWithSpacing:4.0 bottomPadding: 4.0];
+    [self.bananaButton2 jf_alignVerticalWithSpacing:4.0];
+    [self.bananaButton3 jf_alignHorizontalWithSpacing:20.0];
 }
 
 @end

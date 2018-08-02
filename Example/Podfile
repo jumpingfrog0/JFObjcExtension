@@ -1,0 +1,21 @@
+platform :ios, '9.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ObjcExtension' do
+
+	pod 'SDWebImage', '~> 3.8.2'
+
+  # Pods for ObjcExtension
+
+  target 'ObjcExtensionTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ObjcExtensionUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

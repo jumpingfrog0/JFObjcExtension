@@ -5,34 +5,32 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
-    JFBlurEffectStyleExtraLight,
-    JFBlurEffectStyleLight,
-    JFBlurEffectStyleDark
-};
-
 @interface UIView (Drawing)
+
++ (UIView *)jf_topLine;
++ (UIView *)jf_bottomLineWithOffsetX:(CGFloat)offsetX containerHeight:(CGFloat)height;
+
 /**
  * 设置圆形镂空效果
  * @param color 不透明区域的颜色
  * @param radius 圆形半径
  * @param center 圆心
  */
-- (void)setCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius center:(CGPoint)center;
+- (void)jf_setCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius center:(CGPoint)center;
 
 /**
  * 设置居中的圆形镂空效果
  * @param color 不透明区域的颜色
  * @param radius 圆形半径
  */
-- (void)setCenterCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius;
+- (void)jf_setCenterCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius;
 
 /**
  * 设置矩形镂空效果
  * @param color 不透明区域的颜色
  * @param rect 矩形区域
  */
-- (void)setHollowWithMaskColor:(UIColor *)color rect:(CGRect)rect;
+- (void)jf_setHollowWithMaskColor:(UIColor *)color rect:(CGRect)rect;
 
 /**
  * 设置环形进度条
@@ -40,7 +38,7 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
  * @param color 进度条颜色
  * @param width 进度条宽度
  */
-- (void)addCycleProgress:(CGFloat)progress color:(UIColor *)color width:(CGFloat)width;
+- (void)jf_addCycleProgress:(CGFloat)progress color:(UIColor *)color width:(CGFloat)width;
 
 /**
  * 添加一个圆形图层
@@ -48,7 +46,7 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
  * @param width 图层宽度
  * @param radius 圆形半径
  */
-- (void)addCircleLayerWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius;
+- (void)jf_addCircleLayerWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius;
 
 /**
  * 添加一个矩形图层
@@ -56,16 +54,15 @@ typedef NS_ENUM(NSInteger, JFBlurEffectStyle) {
  * @param width 图层宽度
  * @param rect 矩形区域
  */
-- (void)addRectLayerWithColor:(UIColor *)color width:(CGFloat)width inRect:(CGRect)rect;
+- (void)jf_addRectLayerWithColor:(UIColor *)color width:(CGFloat)width inRect:(CGRect)rect;
+@end
 
-#pragma mark - Blur
+@interface UIView (JFDrawRectBlock)
+typedef void(^JFDrawRectBlock)(CGRect rect);
 
-@property(nonatomic, strong, readonly) UIView *blurEffectView;
-@property(nonatomic, strong, readonly) UIVisualEffectView *vibrancyEffectView;
-@property(nonatomic, strong) UIColor *blurTintColor;
-@property(nonatomic, assign) CGFloat blurIntensity;
-@property(nonatomic, assign) JFBlurEffectStyle blurStyle;
+// Creates and return a UIView (of frame CGRectZero) with a block that gets called on drawRect.
++ (UIView *)jf_viewWithDrawRectBlock:(JFDrawRectBlock)block;
 
-- (void)enableBlur:(BOOL)blur;
-- (BOOL)isBlurred;
+// Creates and return a UIView with a block that gets called on drawRect.
++ (UIView *)jf_viewWithFrame:(CGRect)frame drawRectBlock:(JFDrawRectBlock)block;
 @end

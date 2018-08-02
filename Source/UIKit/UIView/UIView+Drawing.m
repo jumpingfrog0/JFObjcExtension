@@ -4,21 +4,39 @@
 //
 
 #import "UIView+Drawing.h"
-#import "UIDevice+Extend.h"
 #import <objc/runtime.h>
+#import "UIImage+JFUIKit.h"
 
 static NSString *const kProgressLayerKey = @"kProgressLayerKey";
 static NSString *const kShapeLayerKey    = @"kShapeLayerKey";
 
-static NSString *const kBlurEffectViewKey     = @"kBlurEffectViewKey";
-static NSString *const kVibrancyEffectViewKey = @"kVibrancyEffectViewKey";
-static NSString *const kBlurTintColorKey      = @"kBlurTintColorKey";
-static NSString *const kBlurIntensityKey      = @"kBlurIntensityKey";
-static NSString *const kBlurStyleKey          = @"kBlurStyleKey";
-
 @implementation UIView (Drawing)
 
-- (void)setCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius center:(CGPoint)center {
++ (UIView *)jf_topLine {
+    UIImage *image = [UIImage jf_imageNamedInMZDUIKitBundle:@"horizontal-separator-default"];
+    CGRect frame =
+                    CGRectMake(0.0, 0.0, [UIScreen mainScreen].bounds.size.width, ceilf(image.size.height / [UIScreen mainScreen].scale));
+    UIImageView *imageView     = [[UIImageView alloc] initWithFrame:frame];
+    imageView.backgroundColor  = [UIColor clearColor];
+    imageView.image            = [image stretchableImageWithLeftCapWidth:1 topCapHeight:0];
+    imageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
+    return imageView;
+}
+
++ (UIView *)jf_bottomLineWithOffsetX:(CGFloat)offsetX containerHeight:(CGFloat)height {
+    UIImage *image = [UIImage jf_imageNamedInMZDUIKitBundle:@"horizontal-separator-default"];
+    CGRect frame   = CGRectMake(offsetX,
+            height - image.size.height,
+            [UIScreen mainScreen].bounds.size.width - offsetX,
+            ceilf(image.size.height / [UIScreen mainScreen].scale));
+    UIImageView *imageView     = [[UIImageView alloc] initWithFrame:frame];
+    imageView.backgroundColor  = [UIColor clearColor];
+    imageView.image            = [image stretchableImageWithLeftCapWidth:1 topCapHeight:0];
+    imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    return imageView;
+}
+
+- (void)jf_setCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius center:(CGPoint)center {
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path appendPath:[UIBezierPath bezierPathWithRect:self.bounds]];
     [path appendPath:[UIBezierPath bezierPathWithArcCenter:center
@@ -35,13 +53,13 @@ static NSString *const kBlurStyleKey          = @"kBlurStyleKey";
     [self.layer addSublayer:shapeLayer];
 }
 
-- (void)setCenterCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius {
-    [self setCircleHollowWithMaskColor:color
+- (void)jf_setCenterCircleHollowWithMaskColor:(UIColor *)color radius:(CGFloat)radius {
+    [self jf_setCircleHollowWithMaskColor:color
                                 radius:radius
                                 center:CGPointMake((CGFloat) (self.bounds.size.width * 0.5), (CGFloat) (self.bounds.size.height * 0.5))];
 }
 
-- (void)setHollowWithMaskColor:(UIColor *)color rect:(CGRect)rect {
+- (void)jf_setHollowWithMaskColor:(UIColor *)color rect:(CGRect)rect {
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path appendPath:[UIBezierPath bezierPathWithRect:self.bounds]];
     [path appendPath:[UIBezierPath bezierPathWithRect:rect]];
@@ -55,10 +73,10 @@ static NSString *const kBlurStyleKey          = @"kBlurStyleKey";
     [self.layer addSublayer:shapeLayer];
 }
 
-- (void)addCycleProgress:(CGFloat)progress color:(UIColor *)color width:(CGFloat)width {
+- (void)jf_addCycleProgress:(CGFloat)progress color:(UIColor *)color width:(CGFloat)width {
 
-    if (self.progressLayer != nil) {
-        [self.progressLayer removeFromSuperlayer];
+    if (self.jf_progressLayer != nil) {
+        [self.jf_progressLayer removeFromSuperlayer];
     }
 
     CGPoint center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
@@ -83,12 +101,12 @@ static NSString *const kBlurStyleKey          = @"kBlurStyleKey";
     progressLayer.path = [path CGPath];
     [self.layer addSublayer:progressLayer];
 
-    self.progressLayer = progressLayer;
+    self.jf_progressLayer = progressLayer;
 }
 
-- (void)addCircleLayerWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius {
-    if (self.shapeLayer != nil) {
-        [self.shapeLayer removeFromSuperlayer];
+- (void)jf_addCircleLayerWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius {
+    if (self.jf_shapeLayer != nil) {
+        [self.jf_shapeLayer removeFromSuperlayer];
     }
 
     CGPoint center     = CGPointMake((CGFloat) (self.bounds.size.width * 0.5), (CGFloat) (self.bounds.size.height * 0.5));
@@ -111,12 +129,12 @@ static NSString *const kBlurStyleKey          = @"kBlurStyleKey";
     shapeLayer.path = [path CGPath];
     [self.layer addSublayer:shapeLayer];
 
-    self.shapeLayer = shapeLayer;
+    self.jf_shapeLayer = shapeLayer;
 }
 
-- (void)addRectLayerWithColor:(UIColor *)color width:(CGFloat)width inRect:(CGRect)rect {
-    if (self.shapeLayer != nil) {
-        [self.shapeLayer removeFromSuperlayer];
+- (void)jf_addRectLayerWithColor:(UIColor *)color width:(CGFloat)width inRect:(CGRect)rect {
+    if (self.jf_shapeLayer != nil) {
+        [self.jf_shapeLayer removeFromSuperlayer];
     }
 
     // 路径
@@ -131,193 +149,25 @@ static NSString *const kBlurStyleKey          = @"kBlurStyleKey";
     shapeLayer.path = [path CGPath];
     [self.layer addSublayer:shapeLayer];
 
-    self.shapeLayer = shapeLayer;
+    self.jf_shapeLayer = shapeLayer;
 }
 
 #pragma mark -
 
-- (void)setShapeLayer:(CAShapeLayer *)shapeLayer {
+- (void)setJf_shapeLayer:(CAShapeLayer *)shapeLayer {
     objc_setAssociatedObject(self, &kShapeLayerKey, shapeLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CAShapeLayer *)shapeLayer {
+- (CAShapeLayer *)jf_shapeLayer {
     return (CAShapeLayer *) objc_getAssociatedObject(self, &kShapeLayerKey);
 }
 
-- (void)setProgressLayer:(CAShapeLayer *)progressLayer {
+- (void)setJf_progressLayer:(CAShapeLayer *)progressLayer {
     objc_setAssociatedObject(self, &kProgressLayerKey, progressLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CAShapeLayer *)progressLayer {
+- (CAShapeLayer *)jf_progressLayer {
     return (CAShapeLayer *) objc_getAssociatedObject(self, &kProgressLayerKey);
 }
 
-#pragma mark - Blur
-
-- (void)enableBlur:(BOOL)enable {
-    if (enable) {
-        if ([UIDevice uponVersion:8.0]) {
-            if (!self.blurEffectView || !self.vibrancyEffectView) {
-                [self renderGaussianBlurEffect];
-            }
-        } else {
-            if (!self.blurEffectView) {
-                [self renderCrudeBlurEffect];
-            }
-        }
-    } else {
-        [self removeBlurEffect];
-    }
-}
-
-- (void)removeBlurEffect {
-    if (self.blurEffectView) {
-        if ([UIDevice uponVersion:8.0]) {
-            [self.vibrancyEffectView removeFromSuperview];
-            [self.blurEffectView removeFromSuperview];
-            objc_setAssociatedObject(self, &kVibrancyEffectViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        } else {
-            [self.blurEffectView.layer removeFromSuperlayer];
-        }
-    }
-    objc_setAssociatedObject(self, &kBlurEffectViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (void)renderGaussianBlurEffect {
-    UIBlurEffectStyle style = UIBlurEffectStyleDark;
-    if (self.blurStyle == JFBlurEffectStyleExtraLight) {
-        style = UIBlurEffectStyleExtraLight;
-    } else if (self.blurStyle == JFBlurEffectStyleLight) {
-        style = UIBlurEffectStyleLight;
-    }
-
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:style];
-    UIVisualEffectView *vibrancyView = [[UIVisualEffectView alloc] initWithEffect:[UIVibrancyEffect effectForBlurEffect:blurEffect]];
-    vibrancyView.frame = self.bounds;
-    NSArray *subviews = self.vibrancyEffectView.contentView.subviews;
-    for (UIView *v in subviews) {
-        [vibrancyView.contentView addSubview:v];
-    }
-
-    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    blurView.frame = self.bounds;
-    [self addSubview:blurView];
-    [blurView.contentView addSubview:vibrancyView];
-    blurView.contentView.backgroundColor = [self.blurTintColor colorWithAlphaComponent:self.blurIntensity];
-
-    self.blurEffectView = blurView;
-    self.vibrancyEffectView = vibrancyView;
-}
-
-- (void)renderCrudeBlurEffect {
-    UIToolbar *blurView = (UIToolbar *)self.blurEffectView;
-    if (!blurView) {
-        blurView = [[UIToolbar alloc] init];
-        self.blurEffectView = blurView;
-        
-        if (self.blurStyle == JFBlurEffectStyleDark) {
-            blurView.barStyle = UIBarStyleBlackTranslucent;
-        } else {
-            blurView.barStyle = UIBarStyleDefault;
-        }
-
-        CALayer *colorLayer = [[CALayer alloc] init];
-        colorLayer.frame = self.bounds;
-        colorLayer.opacity = (float)(self.blurIntensity);
-        colorLayer.opaque = NO;
-        colorLayer.backgroundColor = self.blurTintColor.CGColor;
-        [blurView.layer insertSublayer:colorLayer atIndex:0];
-    }
-    blurView.frame = self.bounds;
-    blurView.clipsToBounds = YES;
-    blurView.translucent = YES;
-
-    
-    [self.layer insertSublayer:blurView.layer atIndex:0];
-}
-
-- (BOOL)isBlurred {
-    return self.blurEffectView != nil;
-}
-
-- (UIView *)blurEffectView {
-    return objc_getAssociatedObject(self, &kBlurEffectViewKey);
-}
-
-- (void)setBlurEffectView:(UIView *)blurEffectView {
-    return objc_setAssociatedObject(self, &kBlurEffectViewKey, blurEffectView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIVisualEffectView *)vibrancyEffectView NS_AVAILABLE_IOS(8_0) {
-    return objc_getAssociatedObject(self, &kVibrancyEffectViewKey);
-}
-
-- (void)setVibrancyEffectView:(UIVisualEffectView *)effectView {
-    objc_setAssociatedObject(self, &kVibrancyEffectViewKey, effectView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (JFBlurEffectStyle)blurStyle {
-    NSNumber *style = objc_getAssociatedObject(self, &kBlurStyleKey);
-    if (!style) {
-        style = @0;
-    }
-    return (JFBlurEffectStyle) style.integerValue;
-}
-
-- (void)setBlurStyle:(JFBlurEffectStyle)style {
-    objc_setAssociatedObject(self, &kBlurStyleKey, @(style), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.blurEffectView) {
-        if ([UIDevice uponVersion:8.0]) {
-            [self removeBlurEffect];
-            [self renderGaussianBlurEffect];
-        } else {
-            if (style == JFBlurEffectStyleDark) {
-                ((UIToolbar *)self.blurEffectView).barStyle = UIBarStyleBlackTranslucent;
-            } else {
-                ((UIToolbar *)self.blurEffectView).barStyle = UIBarStyleDefault;
-            }
-        }
-    }
-}
-
-- (CGFloat)blurIntensity {
-    NSNumber *intensity = objc_getAssociatedObject(self, &kBlurIntensityKey);
-    if (!intensity) {
-        intensity = @0.3;
-    }
-    return (CGFloat) intensity.doubleValue;
-}
-
-- (void)setBlurIntensity:(CGFloat)intensity {
-    objc_setAssociatedObject(self, &kBlurIntensityKey, @(intensity), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.blurEffectView) {
-        if ([UIDevice uponVersion:8.0]) {
-            ((UIVisualEffectView *)self.blurEffectView).contentView.backgroundColor = [self.blurTintColor colorWithAlphaComponent:intensity];
-        } else {
-            [self removeBlurEffect];
-            [self renderCrudeBlurEffect];
-        }
-    }
-}
-
-- (UIColor *)blurTintColor {
-    UIColor *color = objc_getAssociatedObject(self, &kBlurTintColorKey);
-    if (!color) {
-        color = [UIColor clearColor];
-        objc_setAssociatedObject(self, &kBlurTintColorKey, color, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return color;
-}
-
-- (void)setBlurTintColor:(UIColor *)color {
-    objc_setAssociatedObject(self, &kBlurTintColorKey, color, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.blurEffectView) {
-        if ([UIDevice uponVersion:8.0]) {
-            ((UIVisualEffectView *)self.blurEffectView).contentView.backgroundColor = [color colorWithAlphaComponent:self.blurIntensity];
-        } else {
-            [self removeBlurEffect];
-            [self renderCrudeBlurEffect];
-        }
-    }
-}
 @end

@@ -26,9 +26,9 @@
 //  THE SOFTWARE.
 //
 
-#ifndef NSMutableDictionary_MZD_h
-#define NSMutableDictionary_MZD_h
+#ifndef NSMutableDictionary_JF_h
+#define NSMutableDictionary_JF_h
 
 #import "NSMutableDictionary+JFExtension.h"
 
-#endif /* NSMutableDictionary_MZD_h */
+#endif /* NSMutableDictionary_JF_h */

@@ -30,7 +30,7 @@
 #import "UIImageTestController.h"
 #import "UIButtonTestController.h"
 #import "UIViewTestController.h"
-#import "UIViewController+Extend.h"
+#import "UIViewController+JFExtension.h"
 #import "NSArrayTestController.h"
 #import "NSDictionaryTestController.h"
 
@@ -78,15 +78,15 @@
     NSString *category = self.categories[(NSUInteger) indexPath.section][(NSUInteger) indexPath.row];
     
     if ([category isEqualToString:@"UIImage"]) {
-        [UIImageTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+        [UIImageTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     } else if ([category isEqualToString:@"UIButton"]) {
-        [UIButtonTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+        [UIButtonTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     } else if ([category isEqualToString:@"UIView"]) {
-        [UIViewTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+        [UIViewTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     } else if ([category isEqualToString:@"NSArray"]) {
-        [NSArrayTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+        [NSArrayTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     } else if ([category isEqualToString:@"NSDictionary"]) {
-        [NSDictionaryTestController pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
+        [NSDictionaryTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
     }
 }
 @end

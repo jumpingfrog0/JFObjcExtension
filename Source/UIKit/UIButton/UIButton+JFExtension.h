@@ -1,5 +1,5 @@
 //
-//  UIImageTestController.m
+//  UIButton+JFExtension.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 27/07/2017.
@@ -26,23 +26,32 @@
 //  THE SOFTWARE.
 //
 
-#import "UIImageTestController.h"
-#import "UIImage+JFExtension.h"
+#import <UIKit/UIKit.h>
 
-@interface UIImageTestController ()
-@property (weak, nonatomic) IBOutlet UIImageView *bubbleView;
-@property (weak, nonatomic) IBOutlet UIImageView *captureView;
+@interface UIButton (JFExtension)
+/**
+ * 设置按钮的图片和文字垂直对齐
+ * @param spacing 图片与文字的间距
+ * @param bottomPadding 文字距离底部的间距
+ */
+- (void)jf_alignVerticalWithSpacing:(CGFloat)spacing bottomPadding:(CGFloat)bottomPadding;
 
+/**
+ * 设置按钮的图片和文字居中垂直对齐
+ * @param spacing 图片与文字的间距
+ */
+- (void)jf_alignVerticalWithSpacing:(CGFloat)spacing;
+
+/**
+ * 设置按钮的图片和文字居中水平对齐
+ * @param spacing 图片与文字的间距
+ */
+- (void)jf_alignHorizontalWithSpacing:(CGFloat)spacing;
+
+/**
+ * 设置指定范围内的按钮文字颜色
+ * @param color 颜色
+ * @param range 范围
+ */
+- (void)jf_setTitleColor:(UIColor *)color range:(NSRange)range;
 @end
-
-@implementation UIImageTestController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.bubbleView.image = [UIImage jf_resizableImageNamed:@"bubble"];
-//    self.captureView.image = [UIImage captureWithView:self.view];
-}
-
-@end
-
