@@ -42,10 +42,11 @@
 		0809A1832112ED6D00E0A8F8 /* UIImageView+MZDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A14F2112ED6C00E0A8F8 /* UIImageView+MZDExtension.m */; };
 		0809A1842112ED6D00E0A8F8 /* UIImageView+MZDLocalPathCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A1502112ED6C00E0A8F8 /* UIImageView+MZDLocalPathCache.m */; };
 		0809A1852112ED6D00E0A8F8 /* UINavigationBar+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A1522112ED6C00E0A8F8 /* UINavigationBar+JFExtension.m */; };
-		0809A1862112ED6D00E0A8F8 /* UIViewController+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A1582112ED6C00E0A8F8 /* UIViewController+JFExtension.m */; };
+		0809A1862112ED6D00E0A8F8 /* UIViewController+JFNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A1582112ED6C00E0A8F8 /* UIViewController+JFNavigation.m */; };
 		0809A1872112ED6D00E0A8F8 /* UINavigationController+JFStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A15A2112ED6C00E0A8F8 /* UINavigationController+JFStyle.m */; };
 		0809A1882112ED6D00E0A8F8 /* UINavigationController+JFNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A15E2112ED6C00E0A8F8 /* UINavigationController+JFNavigation.m */; };
 		0809A1892112ED6D00E0A8F8 /* UITextField+JFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A1612112ED6C00E0A8F8 /* UITextField+JFExtension.m */; };
+		0809A18C2112FCB300E0A8F8 /* UISegmentedControl+Vertical.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809A18B2112FCB300E0A8F8 /* UISegmentedControl+Vertical.m */; };
 		08173C6320A440F800BD03FA /* NSNumberExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08173C6220A440F800BD03FA /* NSNumberExtensionTests.m */; };
 		084B95CA2111923D000BC5A9 /* MZDGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95942111923D000BC5A9 /* MZDGeometry.m */; };
 		084B95DB2111923D000BC5A9 /* UITabBar+JFSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 084B95C82111923D000BC5A9 /* UITabBar+JFSwizzling.m */; };
@@ -197,8 +198,8 @@
 		0809A1532112ED6C00E0A8F8 /* UINavigationBar+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JFExtension.h"; sourceTree = "<group>"; };
 		0809A1542112ED6C00E0A8F8 /* UINavigationBar+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JF.h"; sourceTree = "<group>"; };
 		0809A1562112ED6C00E0A8F8 /* UIViewController+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JF.h"; sourceTree = "<group>"; };
-		0809A1572112ED6C00E0A8F8 /* UIViewController+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JFExtension.h"; sourceTree = "<group>"; };
-		0809A1582112ED6C00E0A8F8 /* UIViewController+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JFExtension.m"; sourceTree = "<group>"; };
+		0809A1572112ED6C00E0A8F8 /* UIViewController+JFNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JFNavigation.h"; sourceTree = "<group>"; };
+		0809A1582112ED6C00E0A8F8 /* UIViewController+JFNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JFNavigation.m"; sourceTree = "<group>"; };
 		0809A15A2112ED6C00E0A8F8 /* UINavigationController+JFStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JFStyle.m"; sourceTree = "<group>"; };
 		0809A15B2112ED6C00E0A8F8 /* UINavigationController+JFNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JFNavigation.h"; sourceTree = "<group>"; };
 		0809A15C2112ED6C00E0A8F8 /* UINavigationController+JFStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JFStyle.h"; sourceTree = "<group>"; };
@@ -207,6 +208,8 @@
 		0809A1602112ED6C00E0A8F8 /* UITextField+JFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JFExtension.h"; sourceTree = "<group>"; };
 		0809A1612112ED6C00E0A8F8 /* UITextField+JFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JFExtension.m"; sourceTree = "<group>"; };
 		0809A1622112ED6C00E0A8F8 /* UITextField+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JF.h"; sourceTree = "<group>"; };
+		0809A18A2112FCB300E0A8F8 /* UISegmentedControl+Vertical.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+Vertical.h"; sourceTree = "<group>"; };
+		0809A18B2112FCB300E0A8F8 /* UISegmentedControl+Vertical.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+Vertical.m"; sourceTree = "<group>"; };
 		08173C6220A440F800BD03FA /* NSNumberExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSNumberExtensionTests.m; sourceTree = "<group>"; };
 		084B95942111923D000BC5A9 /* MZDGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDGeometry.m; sourceTree = "<group>"; };
 		084B95952111923D000BC5A9 /* MZDGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDGeometry.h; sourceTree = "<group>"; };
@@ -367,6 +370,7 @@
 				0809A1552112ED6C00E0A8F8 /* UIViewController */,
 				0809A1592112ED6C00E0A8F8 /* UINavigationController */,
 				0809A15F2112ED6C00E0A8F8 /* UITextField */,
+				7AA68715489D2DF0D03AC091 /* UISegmentedControl */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -556,8 +560,8 @@
 			isa = PBXGroup;
 			children = (
 				0809A1562112ED6C00E0A8F8 /* UIViewController+JF.h */,
-				0809A1572112ED6C00E0A8F8 /* UIViewController+JFExtension.h */,
-				0809A1582112ED6C00E0A8F8 /* UIViewController+JFExtension.m */,
+				0809A1572112ED6C00E0A8F8 /* UIViewController+JFNavigation.h */,
+				0809A1582112ED6C00E0A8F8 /* UIViewController+JFNavigation.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -879,6 +883,15 @@
 			path = ObjcExtensionUITests;
 			sourceTree = "<group>";
 		};
+		7AA68715489D2DF0D03AC091 /* UISegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				0809A18A2112FCB300E0A8F8 /* UISegmentedControl+Vertical.h */,
+				0809A18B2112FCB300E0A8F8 /* UISegmentedControl+Vertical.m */,
+			);
+			path = UISegmentedControl;
+			sourceTree = "<group>";
+		};
 		8BCAF6128027DE15FDE677C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1098,7 +1111,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0809A1862112ED6D00E0A8F8 /* UIViewController+JFExtension.m in Sources */,
+				0809A1862112ED6D00E0A8F8 /* UIViewController+JFNavigation.m in Sources */,
 				0809A1652112ED6C00E0A8F8 /* UIImage+JFBase64.m in Sources */,
 				0809A16B2112ED6D00E0A8F8 /* UIImage+JFUIKit.m in Sources */,
 				084B96672111A7D4000BC5A9 /* NSNumber+JFExtension.m in Sources */,
@@ -1160,6 +1173,7 @@
 				084B96522111A7D4000BC5A9 /* NSDictionary+JFLog.m in Sources */,
 				0809A16A2112ED6D00E0A8F8 /* UIImage+JFBlur.m in Sources */,
 				0809A1642112ED6C00E0A8F8 /* UIImage+JFAlpha.m in Sources */,
+				0809A18C2112FCB300E0A8F8 /* UISegmentedControl+Vertical.m in Sources */,
 				084B96632111A7D4000BC5A9 /* NSString+JFEncrypt.m in Sources */,
 				0809A17D2112ED6D00E0A8F8 /* UIView+JFTopToast.m in Sources */,
 				0865FDEC1F2DD83900132029 /* UIImageTestController.m in Sources */,

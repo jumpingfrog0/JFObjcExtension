@@ -2,7 +2,7 @@
 //  UIImage+Extend.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
+//  Created by jumpingfrog0 on 2017/07/27.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC

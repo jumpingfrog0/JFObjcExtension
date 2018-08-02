@@ -2,7 +2,7 @@
 //  ViewController.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
+//  Created by jumpingfrog0 on 2017/07/27.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC
@@ -30,7 +30,7 @@
 #import "UIImageTestController.h"
 #import "UIButtonTestController.h"
 #import "UIViewTestController.h"
-#import "UIViewController+JFExtension.h"
+#import "UIViewController+JFNavigation.h"
 #import "NSArrayTestController.h"
 #import "NSDictionaryTestController.h"
 

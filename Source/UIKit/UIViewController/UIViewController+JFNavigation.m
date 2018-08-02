@@ -1,8 +1,8 @@
 //
-//  UIViewController+JFExtension.m
+//  UIViewController+JFNavigation.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
+//  Created by jumpingfrog0 on 2017/07/27.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC
@@ -26,9 +26,9 @@
 //  THE SOFTWARE.
 //
 
-#import "UIViewController+JFExtension.h"
+#import "UIViewController+JFNavigation.h"
 
-@implementation UIViewController (JFExtension)
+@implementation UIViewController (JFNavigation)
 #pragma mark - storyboard
 
 + (instancetype)jf_instantiateFromMainStoryboard {

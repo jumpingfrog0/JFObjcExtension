@@ -1,8 +1,8 @@
 //
-//  NSString+JFEncode.h
+//  UISegmentedControl+Vertical.h
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 2018/08/01.
+//  Created by jumpingfrog0 on 2018/08/02.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC
@@ -26,8 +26,9 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface NSString (JFEncode)
+@interface UISegmentedControl (Vertical)
 
+// https://gist.github.com/yonat/18261fd04cd11a3e9959835509b312c2
 @end

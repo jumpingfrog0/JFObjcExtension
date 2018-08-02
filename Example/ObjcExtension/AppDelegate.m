@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 27/07/2017.
+//  Created by jumpingfrog0 on 2017/07/27.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC
@@ -25,6 +25,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+
+// TODO：https://gist.github.com/yonat/18261fd04cd11a3e9959835509b312c2
 
 #import "AppDelegate.h"
 

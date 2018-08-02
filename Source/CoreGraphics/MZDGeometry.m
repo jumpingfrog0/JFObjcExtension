@@ -2,7 +2,7 @@
 //  MZDGeometry.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 12/10/2017.
+//  Created by jumpingfrog0 on 2017/10/12.
 //
 //
 //  Copyright (c) 2017 Jumpingfrog0 LLC

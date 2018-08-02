@@ -1,8 +1,29 @@
 //
-// UIDevice+JFInfo.h
+//  UIDevice+JFInfo.h
+//  ObjcExtension
 //
-// Created by sheldon on 10/10/2017.
-// Copyright (c) 2017 jumpingfrog0. All rights reserved.
+//  Created by jumpingfrog0 on 2018/08/02.
+//
+//
+//  Copyright (c) 2017 Jumpingfrog0 LLC
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,7 +33,7 @@
  * 设备的网络状态
  * @return 返回网络状态，2G/3G/4G/wifi/notReachable
  */
-+ (NSString *)jf_network;
+//+ (NSString *)jf_network;
 
 /**
  *  设备的 mac 地址
