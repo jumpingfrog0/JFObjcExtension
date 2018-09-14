@@ -4,7 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'ObjcExtension' do
 
-	pod 'SDWebImage', '~> 3.8.2'
+	pod 'SDWebImage', '~> 4.4.2'
 
   # Pods for ObjcExtension
 

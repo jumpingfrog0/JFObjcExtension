@@ -65,4 +65,4 @@ iOSInjectionProject/
 
 # App Code
 .idea/
-Example/.idea/
+*/.idea/

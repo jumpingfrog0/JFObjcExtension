@@ -7,13 +7,12 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NSNumber+JFExtension.h"
 
-@interface NSNumberExtensionTests : XCTestCase
+@interface NSObjcExtensionTests : XCTestCase
 
 @end
 
-@implementation NSNumberExtensionTests
+@implementation NSObjcExtensionTests
 
 - (void)setUp {
     [super setUp];
@@ -26,14 +25,7 @@
 }
 
 - (void)testExample {
-    NSNumber *zero = @(0);
-    NSNumber *one = @(1);
-    NSNumber *ten = @(10);
-    NSNumber *number = @(123);
-    XCTAssertEqual(zero.jf_length, 1);
-    XCTAssertEqual(one.jf_length, 1);
-    XCTAssertEqual(ten.jf_length, 2);
-    XCTAssertEqual(number.jf_length, 3);
+
 }
 
 - (void)testPerformanceExample {

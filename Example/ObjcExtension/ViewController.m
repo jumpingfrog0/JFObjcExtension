@@ -27,12 +27,6 @@
 //
 
 #import "ViewController.h"
-#import "UIImageTestController.h"
-#import "UIButtonTestController.h"
-#import "UIViewTestController.h"
-#import "UIViewController+JFNavigation.h"
-#import "NSArrayTestController.h"
-#import "NSDictionaryTestController.h"
 
 @interface ViewController ()
 @property (nonatomic, copy) NSArray *modules;
@@ -42,10 +36,9 @@
 
 - (void)viewDidLoad {
 
-    self.modules = @[@"Foundation", @"UIKit"];
+    self.modules = @[@"SDWebImageSupport"];
     self.categories = @[
-                   @[@"NSArray", @"NSDictionary", @"NSString"],
-                   @[@"UIColor", @"UIImage", @"UIImageView", @"UIView", @"UIButton", @"UIViewController"],
+                   @[@"UIImageView"],
                    ];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -75,18 +68,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *category = self.categories[(NSUInteger) indexPath.section][(NSUInteger) indexPath.row];
-    
-    if ([category isEqualToString:@"UIImage"]) {
-        [UIImageTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
-    } else if ([category isEqualToString:@"UIButton"]) {
-        [UIButtonTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
-    } else if ([category isEqualToString:@"UIView"]) {
-        [UIViewTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
-    } else if ([category isEqualToString:@"NSArray"]) {
-        [NSArrayTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
-    } else if ([category isEqualToString:@"NSDictionary"]) {
-        [NSDictionaryTestController jf_pushInNavigationController:self.navigationController fromStoryboard:@"Main"];
-    }
+//    NSString *category = self.categories[(NSUInteger) indexPath.section][(NSUInteger) indexPath.row];
 }
 @end
