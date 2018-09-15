@@ -1,5 +1,5 @@
 //
-//  MZDGeometry.h
+//  JFGeometry.h
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 2017/10/12.
@@ -26,7 +26,7 @@
 //  THE SOFTWARE.
 //
 
-#import "MZDGeometry.h"
+#import "JFGeometry.h"
 #import <UIKit/UIKit.h>
 #import <tgmath.h>
 

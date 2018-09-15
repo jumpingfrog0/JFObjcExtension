@@ -4,9 +4,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'ObjcExtension' do
 
-	pod 'SDWebImage', '~> 4.4.2'
+    pod 'ObjcExtension', :path => '../'
 
-  # Pods for ObjcExtension
+  # Pods for ObjcExtensio
 
   target 'ObjcExtensionTests' do
     inherit! :search_paths

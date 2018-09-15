@@ -31,10 +31,8 @@ A collection of Objective-C category excepts Foundation and UIKit.
   s.resource_bundles = {
   	'ObjcExtension' => ['Source/Assets/*.png']
   }
+  s.source_files = 'Source/Classes/**/*.{h,m}'
 
   s.frameworks = 'Foundation', 'UIKit', 'CoreGraphics'
-
-  s.source_files = 'Source/Classes/**/*.{h,m}'
-  
-  s.dependency 'SDWebImage', '~> 4.4.2'
+#  s.dependency 'SDWebImage', '~> 4.4.2'
 end

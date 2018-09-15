@@ -1,5 +1,5 @@
 //
-//  MZDGeometry.m
+//  JFGeometry.m
 //  ObjcExtension
 //
 //  Created by jumpingfrog0 on 2017/10/12.
@@ -26,7 +26,7 @@
 //  THE SOFTWARE.
 //
 
-#import "MZDGeometry.h"
+#import "JFGeometry.h"
 
 #pragma mark - CGRect
 
