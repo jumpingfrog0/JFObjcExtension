@@ -33,6 +33,6 @@ A collection of Objective-C category excepts Foundation and UIKit.
   }
   s.source_files = 'Source/Classes/**/*.{h,m}'
 
-  s.frameworks = 'Foundation', 'UIKit', 'CoreGraphics'
+  s.frameworks = 'Foundation', 'UIKit', 'CoreGraphics', 'AVFoundation'
 #  s.dependency 'SDWebImage', '~> 4.4.2'
 end
