@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Objective-C Extension.
                        DESC
 
   s.homepage         = 'https://github.com/jumpingfrog0/JFObjcExtension'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jumpingfrog0' => 'huangdonghong2@yy.com' }
+  s.author           = { 'jumpingfrog0' => 'jumpingfrog0@gmail.com' }
   s.source           = { :git => 'https://github.com/jumpingfrog0/JFObjcExtension.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
