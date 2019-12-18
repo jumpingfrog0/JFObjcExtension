@@ -1,11 +1,11 @@
 //
 //  AVAudioSession+JFConfiguration.m
-//  ObjcExtension
+//  JFObjcExtension
 //
 //  Created by jumpingfrog0 on 2019/04/22.
 //
 //
-//  Copyright (c) 2017 Jumpingfrog0 LLC
+//  Copyright © 2019 jumpingfrog0. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +25,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+
 #import <objc/runtime.h>
 #import "AVAudioSession+JFConfiguration.h"
 
@@ -33,36 +34,37 @@ static char kMuteButtonEnabledKey;
 
 @implementation AVAudioSession (JFConfiguration)
 
-- (void)setPortOverride:(AVAudioSessionPortOverride)portOverride {
-    if (self.portOverride != portOverride) {
+- (AVAudioSessionPortOverride)jf_portOverride {
+    return (AVAudioSessionPortOverride)[objc_getAssociatedObject(self, &kAVAudioSessionPortOverrideCache) unsignedIntegerValue];
+}
+
+- (void)setJf_portOverride:(AVAudioSessionPortOverride)portOverride {
+    if (self.jf_portOverride != portOverride) {
         objc_setAssociatedObject(self, &kAVAudioSessionPortOverrideCache, @(portOverride), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 
-- (AVAudioSessionPortOverride)portOverride {
-    return (AVAudioSessionPortOverride)[objc_getAssociatedObject(self, &kAVAudioSessionPortOverrideCache) unsignedIntegerValue];
-}
-
-- (BOOL)isMuteButtonEnabled {
+- (BOOL)jf_muteButtonEnabled {
     return [objc_getAssociatedObject(self, &kMuteButtonEnabledKey) boolValue];
 }
 
-- (void)setMuteButtonEnabled:(BOOL)enabled {
+- (void)setJf_muteButtonEnabled:(BOOL)enabled {
     objc_setAssociatedObject(self, &kMuteButtonEnabledKey, @(enabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self changeConfig];
+    [self jf_changeConfig];
 }
 
-- (void)initSession {
+- (void)jf_initSession {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(sessionRouteChanged:)
+                                             selector:@selector(jf_sessionRouteChanged:)
                                                  name:AVAudioSessionRouteChangeNotification
                                                object:nil];
 
-    [self resetConfig];
+    [self jf_resetConfig];
 }
 
-- (void)resetConfig {
-    if (self.isMuteButtonEnabled) {
+- (void)jf_resetConfig
+{
+    if (self.jf_muteButtonEnabled) {
         if (![self.category isEqualToString:AVAudioSessionCategorySoloAmbient]) {
             [self setCategory:AVAudioSessionCategorySoloAmbient error:nil];
         }
@@ -72,27 +74,31 @@ static char kMuteButtonEnabledKey;
             [self setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
         }
     }
+
 }
 
-- (void)changeConfig {
-    if (self.isMuteButtonEnabled) {
+- (void)jf_changeConfig {
+    if (self.jf_muteButtonEnabled) {
         [self setCategory:AVAudioSessionCategorySoloAmbient error:nil];
     } else {
         [self setCategory:AVAudioSessionCategoryPlayback error:nil];
     }
 }
 
-- (void)changeAudioRouteToSpeaker {
-    [self setPortOverride:AVAudioSessionPortOverrideSpeaker];
+- (void)jf_changeAudioRouteToSpeaker
+{
+    [self setJf_portOverride:AVAudioSessionPortOverrideSpeaker];
     [self overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:nil];
 }
 
-- (void)changeAudioRouteToReceiver {
-    [self setPortOverride:AVAudioSessionPortOverrideNone];
+- (void)jf_changeAudioRouteToReceiver
+{
+    [self setJf_portOverride:AVAudioSessionPortOverrideNone];
     [self overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
 }
 
-- (BOOL)isReceiverAvailable {
+- (BOOL)jf_isReceiverAvailable
+{
 #if TARGET_IPHONE_SIMULATOR
     #warning *** Simulator mode: audio session code works only on a device
     return NO;
@@ -115,7 +121,7 @@ static char kMuteButtonEnabledKey;
 #endif
 }
 
-- (BOOL)hasHeadset {
+- (BOOL)jf_hasHeadset {
     for (AVAudioSessionPortDescription *desc in self.currentRoute.outputs) {
         if ([desc.portType isEqualToString:AVAudioSessionPortHeadphones]) {
             return YES;
@@ -125,18 +131,19 @@ static char kMuteButtonEnabledKey;
 }
 
 #pragma mark --
-- (void)sessionRouteChanged:(NSNotification *)notification {
+- (void)jf_sessionRouteChanged:(NSNotification *)notification
+{
     NSInteger reason = [notification.userInfo[AVAudioSessionRouteChangeReasonKey] integerValue];
 
     if (reason == kAudioSessionRouteChangeReason_OldDeviceUnavailable ||
             reason == kAudioSessionRouteChangeReason_NewDeviceAvailable ||
             reason == kAudioSessionRouteChangeReason_NoSuitableRouteForCategory)
     {
-        if (self.hasHeadset) {
+        if (self.jf_hasHeadset) {
             [self overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
         }
         else {
-            [self overrideOutputAudioPort:self.portOverride error:nil];
+            [self overrideOutputAudioPort:self.jf_portOverride error:nil];
         }
     }
 }

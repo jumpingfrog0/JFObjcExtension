@@ -1,21 +1,11 @@
-platform :ios, '9.0'
+use_frameworks!
 
-source 'https://github.com/CocoaPods/Specs.git'
+target 'JFObjcExtension_Example' do
+  pod 'JFObjcExtension', :path => '../'
 
-target 'ObjcExtension' do
-
-    pod 'ObjcExtension', :path => '../'
-
-  # Pods for ObjcExtensio
-
-  target 'ObjcExtensionTests' do
+  target 'JFObjcExtension_Tests' do
     inherit! :search_paths
-    # Pods for testing
-  end
 
-  target 'ObjcExtensionUITests' do
-    inherit! :search_paths
-    # Pods for testing
+    
   end
-
 end

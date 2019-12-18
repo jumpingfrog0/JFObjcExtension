@@ -1,8 +1,8 @@
 //
-//  AVAudioSession+JFConfiguration.h
-//  JFObjcExtension
+//  CLLocation+Convert.h
+//  ObjcExtension
 //
-//  Created by jumpingfrog0 on 2019/04/22.
+//  Created by jumpingfrog0 on 2019/12/18.
 //
 //
 //  Copyright © 2019 jumpingfrog0. All rights reserved.
@@ -26,23 +26,21 @@
 //  THE SOFTWARE.
 //
 
-#import <AVFoundation/AVFoundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface AVAudioSession (JFConfiguration)
+/**
+ * 火星坐标系转换扩展
+ * earth（国外 WGS84）, mars（国内 GCJ-02）, bearPaw（百度 BD-09） 坐标系间相互转换
+ * 未包含 mars2earth. 需要这个可参考 http://xcodev.com/131.html
+ *
+ * @see https://gist.github.com/zvving/5476132
+ */
+@interface CLLocation (JFConvert)
 
-// 用来保存每次插拔音频输出设备时, 当前的 port override (外放还是听筒)
-@property (nonatomic, assign) AVAudioSessionPortOverride jf_portOverride;
+- (CLLocation*)jf_locationMarsFromEarth;
+//- (CLLocation*)locationEarthFromMars; // 未实现
 
-@property (nonatomic, assign) BOOL jf_muteButtonEnabled;
-
-- (void)jf_initSession;
-- (void)jf_resetConfig;
-- (void)jf_changeConfig;
-
-- (void)jf_changeAudioRouteToSpeaker;
-- (void)jf_changeAudioRouteToReceiver;
-
-- (BOOL)jf_isReceiverAvailable;
-- (BOOL)jf_hasHeadset;
+- (CLLocation*)jf_locationBearPawFromMars;
+- (CLLocation*)jf_locationMarsFromBearPaw;
 
 @end

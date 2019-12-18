@@ -2,10 +2,10 @@
 //  JFGeometry.m
 //  ObjcExtension
 //
-//  Created by jumpingfrog0 on 2017/10/12.
+//  Created by jumpingfrog0 on 2019/12/18.
 //
 //
-//  Copyright (c) 2017 Jumpingfrog0 LLC
+//  Copyright © 2019 jumpingfrog0. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

@@ -1,8 +1,8 @@
 //
-//  AVAudioSession+JFConfiguration.h
-//  JFObjcExtension
+//  JFObjcExtensionTests.m
+//  JFObjcExtensionTests
 //
-//  Created by jumpingfrog0 on 2019/04/22.
+//  Created by jumpingfrog0 on 2019/12/18.
 //
 //
 //  Copyright © 2019 jumpingfrog0. All rights reserved.
@@ -26,23 +26,30 @@
 //  THE SOFTWARE.
 //
 
-#import <AVFoundation/AVFoundation.h>
+@import XCTest;
 
-@interface AVAudioSession (JFConfiguration)
-
-// 用来保存每次插拔音频输出设备时, 当前的 port override (外放还是听筒)
-@property (nonatomic, assign) AVAudioSessionPortOverride jf_portOverride;
-
-@property (nonatomic, assign) BOOL jf_muteButtonEnabled;
-
-- (void)jf_initSession;
-- (void)jf_resetConfig;
-- (void)jf_changeConfig;
-
-- (void)jf_changeAudioRouteToSpeaker;
-- (void)jf_changeAudioRouteToReceiver;
-
-- (BOOL)jf_isReceiverAvailable;
-- (BOOL)jf_hasHeadset;
+@interface Tests : XCTestCase
 
 @end
+
+@implementation Tests
+
+- (void)setUp
+{
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+}
+
+- (void)tearDown
+{
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+- (void)testExample
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+@end
+

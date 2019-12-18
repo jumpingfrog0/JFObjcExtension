@@ -1,8 +1,8 @@
 //
-//  AVAudioSession+JFConfiguration.h
+//  main.m
 //  JFObjcExtension
 //
-//  Created by jumpingfrog0 on 2019/04/22.
+//  Created by jumpingfrog0 on 2019/12/18.
 //
 //
 //  Copyright © 2019 jumpingfrog0. All rights reserved.
@@ -26,23 +26,13 @@
 //  THE SOFTWARE.
 //
 
-#import <AVFoundation/AVFoundation.h>
 
-@interface AVAudioSession (JFConfiguration)
+@import UIKit;
+#import "AppDelegate.h"
 
-// 用来保存每次插拔音频输出设备时, 当前的 port override (外放还是听筒)
-@property (nonatomic, assign) AVAudioSessionPortOverride jf_portOverride;
-
-@property (nonatomic, assign) BOOL jf_muteButtonEnabled;
-
-- (void)jf_initSession;
-- (void)jf_resetConfig;
-- (void)jf_changeConfig;
-
-- (void)jf_changeAudioRouteToSpeaker;
-- (void)jf_changeAudioRouteToReceiver;
-
-- (BOOL)jf_isReceiverAvailable;
-- (BOOL)jf_hasHeadset;
-
-@end
+int main(int argc, char * argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}
